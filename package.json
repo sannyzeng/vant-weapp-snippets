@@ -1,19 +1,19 @@
 {
-  "name": "vant-snippets",
-  "displayName": "Vant Snippets",
-  "version": "0.1.5",
-  "publisher": "fishku",
+  "name": "vant-weapp-snippets",
+  "displayName": "Vant Weapp Snippets",
+  "version": "0.0.1",
+  "publisher": "Ken",
   "author": {
-    "name": "fishku"
+    "name": "Ken"
   },
   "categories": [
     "Snippets"
   ],
-  "description": "Vant Snippets for VS Code",
+  "description": "Vant Weapp Snippets for VS Code",
   "icon": "images/logo.png",
   "keywords": [
     "vant",
-    "mobile",
+    "weapp",
     "vue",
     "snippets"
   ],
@@ -22,7 +22,8 @@
     "theme": "dark"
   },
   "activationEvents": [
-    "onLanguage:vuejs"
+    "onLanguage:wxml",
+    "onLanguage:json"
   ],
   "engines": {
     "vscode": "^1.0.0"
@@ -33,30 +34,46 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yhsy/vant-snippets/issues",
+    "url": "https://github.com/sannyzeng/vant-snippets/issues",
     "email": "juerui@vip.qq.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yhsy/vant-snippets"
+    "url": "https://github.com/sannyzeng/vant-snippets"
   },
   "contributes": {
+    "languages": [
+      {
+        "id": "wxml",
+        "aliases": [
+          "wxml",
+          "wxml"
+        ],
+        "extensions": [
+          ".wxml"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "wxml",
+        "scopeName": "text.html.wxml",
+        "path": "./syntaxes/wxml.tmLanguage"
+      }
+    ],
     "snippets": [
       {
-        "language": "javascript",
-        "path": "./snippets/element-ui.json"
+        "language": "wxml",
+        "path": "./snippets/vant-wxml.json"
       },
       {
         "language": "html",
-        "path": "./snippets/element-ui.json"
+        "path": "./snippets/vant-wxml.json"
       },
       {
-        "language": "vue",
-        "path": "./snippets/vant-ui.json"
-      },
-      {
-        "language": "vue-html",
-        "path": "./snippets/vant-ui.json"
+        "language": "json",
+        "path": "./snippets/vant-json.json"
       }
     ]
   }

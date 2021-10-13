@@ -1,0 +1,9 @@
+{
+  "Basic: w-van-button": {
+    "prefix": "wvanb",
+    "body": [
+      "<van-button type=\"${1|primary,info,warning,danger,default|}\">${2}</van-button>"
+    ],
+    "description": "Vant <van-button>按钮</van-button>"
+  }
+}
