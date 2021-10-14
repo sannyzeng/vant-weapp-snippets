@@ -2,9 +2,9 @@
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
   "version": "0.0.2",
-  "publisher": "Ken",
+  "publisher": "Kenzeng",
   "author": {
-    "name": "Ken"
+    "name": "Kenzeng"
   },
   "categories": [
     "Snippets"
@@ -37,7 +37,8 @@
   },
   "scripts": {
     "gen": "node ./tools/gen",
-    "build": "vsce package"
+    "build": "vsce package",
+    "publish": "vsce publish"
   },
   "license": "MIT",
   "bugs": {
