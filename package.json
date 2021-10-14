@@ -23,7 +23,10 @@
   },
   "activationEvents": [
     "onLanguage:wxml",
-    "onLanguage:json"
+    "onLanguage:json",
+    "onLanguage:javascript",
+    "onLanguage:css",
+    "onLanguage:wxss"
   ],
   "engines": {
     "vscode": "^1.0.0"
@@ -31,6 +34,10 @@
   "main": "./out/extension",
   "devDependencies": {
     "vscode": "0.10.x"
+  },
+  "scripts": {
+    "gen": "node ./tools/gen",
+    "build": "vsce package"
   },
   "license": "MIT",
   "bugs": {
@@ -46,13 +53,18 @@
       {
         "id": "wxml",
         "aliases": [
-          "wxml",
           "wxml"
         ],
         "extensions": [
           ".wxml"
         ],
         "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "wxss",
+        "extensions": [
+          ".wxss"
+        ]
       }
     ],
     "grammars": [
@@ -74,7 +86,20 @@
       {
         "language": "json",
         "path": "./snippets/vant-json.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/vant-js.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/vant-wxss.json"
+      },
+      {
+        "language": "wxss",
+        "path": "./snippets/vant-wxss.json"
       }
     ]
-  }
+  },
+  "dependencies": {}
 }

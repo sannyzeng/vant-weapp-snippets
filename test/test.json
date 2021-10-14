@@ -1,0 +1,5 @@
+{
+  "van-tab": "@vant/weapp/tab/index",
+  "van-tabs": "@vant/weapp/tabs/index",
+  "van-action-sheet": "@vant/weapp/action-sheet/index"
+}

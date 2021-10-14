@@ -1,0 +1,107 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dell\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  d:\Program Files\ImageMagick-6.9.12-Q16;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Program Files (x86)\NetSarang\Xftp 6\;D:\Program Files (x86)\NetSarang\Xshell 6\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jdk1.8.0_201\jre\bin;D:\flutter\bin;D:\Android\Sdk\platform-tools;D:\Program Files\TortoiseGit\bin;d:\Program Files\Git\cmd;D:\phpstudy_pro\Extensions\php\php7.1.9nts;C:\OpenSSL-Win64\bin;D:\Program Files\TortoiseSVN\bin;d:\Program Files\Microsoft VS Code\bin;C:\Program Files\python;C:\Program Files\python\Scripts;D:\BtSoft\panel\script;C:\Program Files\nodejs\;C:\Users\dell\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\dell\AppData\Local\Programs\Python\Python37-32\;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;d:\Fiddler;C:\Users\dell\AppData\Local\BypassRuntm;d:\Program Files\Huawei\DevEco Studio\bin;;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Git\bin;C:\Users\dell\AppData\Roaming\npm;
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  14.17.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ECONNREFUSED 61.184.215.182:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
+
+npm manifest: 
+  {
+    "name": "vant-weapp-snippets",
+    "displayName": "Vant Weapp Snippets",
+    "version": "0.0.1",
+    "publisher": "Ken",
+    "author": {
+      "name": "Ken"
+    },
+    "categories": [
+      "Snippets"
+    ],
+    "description": "Vant Weapp Snippets for VS Code",
+    "icon": "images/logo.png",
+    "keywords": [
+      "vant",
+      "weapp",
+      "vue",
+      "snippets"
+    ],
+    "galleryBanner": {
+      "color": "#549BFF",
+      "theme": "dark"
+    },
+    "activationEvents": [
+      "onLanguage:wxml",
+      "onLanguage:json"
+    ],
+    "engines": {
+      "vscode": "^1.0.0"
+    },
+    "main": "./out/extension",
+    "devDependencies": {
+      "cheerio": "^1.0.0-rc.10",
+      "vscode": "0.10.x"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/sannyzeng/vant-snippets/issues",
+      "email": "juerui@vip.qq.com"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sannyzeng/vant-snippets"
+    },
+    "contributes": {
+      "languages": [
+        {
+          "id": "wxml",
+          "aliases": [
+            "wxml",
+            "wxml"
+          ],
+          "extensions": [
+            ".wxml"
+          ],
+          "configuration": "./language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "wxml",
+          "scopeName": "text.html.wxml",
+          "path": "./syntaxes/wxml.tmLanguage"
+        }
+      ],
+      "snippets": [
+        {
+          "language": "wxml",
+          "path": "./snippets/vant-wxml.json"
+        },
+        {
+          "language": "html",
+          "path": "./snippets/vant-wxml.json"
+        },
+        {
+          "language": "json",
+          "path": "./snippets/vant-json.json"
+        }
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
