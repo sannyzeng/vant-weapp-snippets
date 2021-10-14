@@ -1,37 +1,27 @@
-<!--
- * @Description: Vant Snippets
- * @Author: fishku
- * @Date: 2019-08-12 08:44:25
- * @LastEditTime: 2019-08-14 15:33:33
- * @LastEditors: Please set LastEditors
- -->
-## This is Code Snippets of Vant for VS Code. (Vant Version: v2.8.3)
+## This is Code Snippets of Vant Weapp for VS Code. (Vant Weapp Version: v1.9.0)
 ### Git: 
-[Vant Snippets](https://github.com/yhsy/vant-snippets) 
+[Vant Weapp Snippets](https://github.com/sannyzeng/vant-weapp-snippets) 
 
 ### Thanks: 
-[小茗同学](http://blog.haoji.me/vscode-plugin-overview.html)
-[Element-UI-Snippets-VSCode](https://github.com/snowffer/Element-UI-Snippets-VSCode)
-
-### Autocomplete
-![autocomplete](https://s1.ax1x.com/2020/05/25/tCR6JJ.gif)
+[fishku](https://github.com/yhsy/vant-snippets)
 
 ### Snippets List
-1. All the Vant tags below, ignore the closure and more detailed information. Such as `vanr` to `<van-row>`
+1. All the Vant tags below, ignore the closure and more detailed information. Such as `wvanr` to `<van-row>`
 2. Totally  snippets. Will add more if necessary.
 3. **Only work in .vue file for now.**
 
+### wxml
 #### Basic Part (9)
 |  No.  | Trigger&nbsp;Key | Vant Tag                |
 | :---: | :--------------: | :---------------------- |
-|  1.   |    `vanb`        | `<van-button>`          |
-|  2.   |    `vancell`     | `<van-cell>`            |
-|  3.   |    `vanicon`     | `<van-icon>`            |
-|  4.   |    `vanimg`      | `<van-image>`           |
-|  5.   |    `vanr`        | `<van-row>`             |
-|  6.   |    `vanrf`       | `<van-row type="flex">` |
-|  7.   |    `vanrg`       | `<van-row gutter="">`   |
-|  8.   |    `vanc`        | `<van-col>`             |
+|  1.   |    `wvanb`        | `<van-button>`         |
+|  2.   |    `wvanc`        | `<van-cell-group>`     |
+|  3.   |    `wvani`        | `<van-icon>`           |
+|  4.   |    `wvanim`       | `<van-image>`           |
+|  5.   |    `wvanco`        | `<van-row>`             |
+|  6.   |    `wvanrf`       | `<van-row type="flex">` |
+|  7.   |    `wvanrg`       | `<van-row gutter="">`   |
+|  8.   |    `wvanc`        | `<van-col>`             |
 |  9.   |    `vanpopup`    | `<van-popup>`           |
 
 #### Form Part (15)

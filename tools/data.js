@@ -13,17 +13,17 @@ exports.data = {
       },
     },
     cell: {
-      json: [
-        '"van-cell": "@vant/weapp/cell/index",',
-        '"van-cell-group": "@vant/weapp/cell-group/index"',
-      ],
+      json: ['"van-cell": "@vant/weapp/cell/index"'],
       wxml: {
-        text: `
-        <van-cell-group>
-            <van-cell title="单元格" value="内容" />
-            <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
-        </van-cell-group>
-        `,
+        text: '<van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />',
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "cell-group": {
+      json: ['"van-cell-group": "@vant/weapp/cell-group/index"'],
+      wxml: {
+        text: "<van-cell-group>${1}</van-cell-group>",
         replaceKey: [],
         replaceContent: [],
       },
@@ -50,19 +50,18 @@ exports.data = {
         replaceContent: ["${1|contain,cover,fill,widthFix,heightFix,none|}"],
       },
     },
-    col: {
-      json: [
-        '"van-row": "@vant/weapp/row/index",',
-        '"van-col": "@vant/weapp/col/index"',
-      ],
+    row: {
+      json: ['"van-row": "@vant/weapp/row/index"'],
       wxml: {
-        text: `
-        <van-row>
-            <van-col span="8">span: 8</van-col>
-            <van-col span="8">span: 8</van-col>
-            <van-col span="8">span: 8</van-col>
-        </van-row>
-        `,
+        text: "<van-row>${1}</van-row>",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    col: {
+      json: ['"van-col": "@vant/weapp/col/index"'],
+      wxml: {
+        text: '<van-col span="8">span: 8</van-col>',
         replaceKey: [],
         replaceContent: [],
       },
@@ -114,15 +113,13 @@ exports.data = {
     "datetime-picker": {
       json: ['"van-datetime-picker": "@vant/weapp/datetime-picker/index"'],
       wxml: {
-        text: `
-          <van-datetime-picker
+        text: `<van-datetime-picker
             type="datetime"
             value="{{ currentDate }}"
             min-date="{{ minDate }}"
             max-date="{{ maxDate }}"
             bind:input="onInput"
-            />
-          `,
+            />`,
         replaceKey: ["datetime"],
         replaceContent: ["${1|datetime,date,time,year-month|}"],
       },
@@ -130,15 +127,13 @@ exports.data = {
     field: {
       json: ['"van-field": "@vant/weapp/field/index"'],
       wxml: {
-        text: `
-          <van-field
+        text: `<van-field
             type="text"
             value="{{ value }}"
             placeholder="请输入用户名"
             border="{{ false }}"
             bind:change="onChange"
-          />
-            `,
+          />`,
         replaceKey: ["text"],
         replaceContent: ["${1|text,number,idcard,textarea,digit|}"],
       },
@@ -157,12 +152,10 @@ exports.data = {
         '"van-radio-group": "@vant/weapp/radio-group/index"',
       ],
       wxml: {
-        text: `
-        <van-radio-group direction="vertical" value="{{ radio }}" bind:change="onChange">
+        text: `<van-radio-group direction="vertical" value="{{ radio }}" bind:change="onChange">
           <van-radio shape="round" name="1">单选框 1</van-radio>
           <van-radio name="2">单选框 2</van-radio>
-        </van-radio-group>
-        `,
+        </van-radio-group>`,
         replaceKey: ["vertical", "round"],
         replaceContent: ["${1|vertical,horizontal|}", "${2|round,square|}"],
       },
@@ -218,14 +211,12 @@ exports.data = {
     "action-sheet": {
       json: ['"van-action-sheet": "@vant/weapp/action-sheet/index"'],
       wxml: {
-        text: `
-        <van-action-sheet
+        text: `<van-action-sheet
           show="{{ show }}"
           actions="{{ actions }}"
           bind:close="onClose"
           bind:select="onSelect"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -245,12 +236,10 @@ exports.data = {
         '"van-dropdown-item": "@vant/weapp/dropdown-item/index"',
       ],
       wxml: {
-        text: `
-        <van-dropdown-menu>
+        text: `<van-dropdown-menu>
           <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
           <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
-        </van-dropdown-menu>
-        `,
+        </van-dropdown-menu>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -283,15 +272,13 @@ exports.data = {
     "share-sheet": {
       json: ['"van-share-sheet": "@vant/weapp/share-sheet/index"'],
       wxml: {
-        text: `
-        <van-share-sheet
+        text: `<van-share-sheet
           show="{{ showShare }}"
           title="立即分享给好友"
           options="{{ options }}"
           bind:select="onSelect"
           bind:close="onClose"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -299,15 +286,13 @@ exports.data = {
     "swipe-cell": {
       json: ['"van-swipe-cell": "@vant/weapp/swipe-cell/index"'],
       wxml: {
-        text: `
-        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+        text: `<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
           <view slot="left">选择</view>
           <van-cell-group>
             <van-cell title="单元格" value="内容" />
           </van-cell-group>
           <view slot="right">删除</view>
-        </van-swipe-cell>
-        `,
+        </van-swipe-cell>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -326,8 +311,7 @@ exports.data = {
         '"van-collapse-item": "@vant/weapp/collapse-item/index"',
       ],
       wxml: {
-        text: `
-        <van-collapse value="{{ activeNames }}" bind:change="onChange">
+        text: `<van-collapse value="{{ activeNames }}" bind:change="onChange">
           <van-collapse-item title="有赞微商城" name="1">
             提供多样店铺模板，快速搭建网上商城
           </van-collapse-item>
@@ -337,8 +321,7 @@ exports.data = {
           <van-collapse-item title="有赞美业" name="3" disabled>
             线上拓客，随时预约，贴心顺手的开单收银
           </van-collapse-item>
-        </van-collapse>
-        `,
+        </van-collapse>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -370,12 +353,10 @@ exports.data = {
     "notice-bar": {
       json: ['"van-notice-bar": "@vant/weapp/notice-bar/index"'],
       wxml: {
-        text: `
-        <van-notice-bar
+        text: `<van-notice-bar
           left-icon="volume-o"
           text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -426,14 +407,12 @@ exports.data = {
         '"van-grid-item": "@vant/weapp/grid-item/index"',
       ],
       wxml: {
-        text: `
-        <van-grid>
+        text: `<van-grid>
           <van-grid-item icon="photo-o" text="文字" />
           <van-grid-item icon="photo-o" text="文字" />
           <van-grid-item icon="photo-o" text="文字" />
           <van-grid-item icon="photo-o" text="文字" />
-        </van-grid>
-        `,
+        </van-grid>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -444,8 +423,7 @@ exports.data = {
         '"van-index-anchor": "@vant/weapp/index-anchor/index"',
       ],
       wxml: {
-        text: `
-        <van-index-bar>
+        text: `<van-index-bar>
           <view>
             <van-index-anchor index="A" />
             <van-cell title="文本" />
@@ -459,8 +437,7 @@ exports.data = {
             <van-cell title="文本" />
             <van-cell title="文本" />
           </view>
-        </van-index-bar>
-        `,
+        </van-index-bar>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -468,16 +445,14 @@ exports.data = {
     "nav-bar": {
       json: ['"van-nav-bar": "@vant/weapp/nav-bar/index"'],
       wxml: {
-        text: `
-        <van-nav-bar
+        text: `<van-nav-bar
           title="标题"
           left-text="返回"
           right-text="按钮"
           left-arrow
           bind:click-left="onClickLeft"
           bind:click-right="onClickRight"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -488,13 +463,11 @@ exports.data = {
         '"van-sidebar-item": "@vant/weapp/sidebar-item/index"',
       ],
       wxml: {
-        text: `
-        <van-sidebar active-key="{{ activeKey }}">
+        text: `<van-sidebar active-key="{{ activeKey }}">
           <van-sidebar-item title="标签名" />
           <van-sidebar-item title="标签名" />
           <van-sidebar-item title="标签名" />
-        </van-sidebar>
-        `,
+        </van-sidebar>`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -505,14 +478,12 @@ exports.data = {
         '"van-tabs": "@vant/weapp/tabs/index"',
       ],
       wxml: {
-        text: `
-        <van-tabs type="line" active="{{ active }}" bind:change="onChange">
+        text: `<van-tabs type="line" active="{{ active }}" bind:change="onChange">
           <van-tab title="标签 1">内容 1</van-tab>
           <van-tab title="标签 2">内容 2</van-tab>
           <van-tab title="标签 3">内容 3</van-tab>
           <van-tab title="标签 4">内容 4</van-tab>
-        </van-tabs>
-        `,
+        </van-tabs>`,
         replaceKey: ["line"],
         replaceContent: ["${1|line,card|}"],
       },
@@ -523,14 +494,12 @@ exports.data = {
         '"van-tabbar-item": "@vant/weapp/tabbar-item/index"',
       ],
       wxml: {
-        text: `
-        <van-tabbar active="{{ active }}" bind:change="onChange">
+        text: `<van-tabbar active="{{ active }}" bind:change="onChange">
           <van-tabbar-item icon="home-o">标签</van-tabbar-item>
           <van-tabbar-item icon="search">标签</van-tabbar-item>
           <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
           <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-        </van-tabbar>
-        `,
+        </van-tabbar>`,
         replaceKey: ["line"],
         replaceContent: ["${1|line,card|}"],
       },
@@ -538,15 +507,13 @@ exports.data = {
     "tree-select": {
       json: ['"van-tree-select": "@vant/weapp/tree-select/index"'],
       wxml: {
-        text: `
-        <van-tree-select
+        text: `<van-tree-select
           items="{{ items }}"
           main-active-index="{{ mainActiveIndex }}"
           active-id="{{ activeId }}"
           bind:click-nav="onClickNav"
           bind:click-item="onClickItem"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -562,15 +529,13 @@ exports.data = {
     card: {
       json: ['"van-card": "@vant/weapp/card/index"'],
       wxml: {
-        text: `
-        <van-card
+        text: `<van-card
           num="2"
           price="2.00"
           desc="描述信息"
           title="商品标题"
           thumb="{{ imageURL }}"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -578,13 +543,11 @@ exports.data = {
     "submit-bar": {
       json: ['"van-submit-bar": "@vant/weapp/submit-bar/index"'],
       wxml: {
-        text: `
-        <van-submit-bar
+        text: `<van-submit-bar
           price="{{ 3050 }}"
           button-text="提交订单"
           bind:submit="onSubmit"
-        />
-        `,
+        />`,
         replaceKey: [],
         replaceContent: [],
       },
@@ -596,8 +559,7 @@ exports.data = {
         '"van-goods-action-button": "@vant/weapp/goods-action-button/index"',
       ],
       wxml: {
-        text: `
-        <van-goods-action>
+        text: `<van-goods-action>
           <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
           <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
           <van-goods-action-button
@@ -606,8 +568,7 @@ exports.data = {
             bind:click="onClickButton"
           />
           <van-goods-action-button text="立即购买" bind:click="onClickButton" />
-        </van-goods-action>
-        `,
+        </van-goods-action>`,
         replaceKey: [],
         replaceContent: [],
       },
