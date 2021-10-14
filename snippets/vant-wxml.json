@@ -61,7 +61,7 @@
   },
   "w-vant-datetime-picker": {
     "prefix": "wvand",
-    "body": "<van-${1|datetime,date,time,year-month|}-picker\n            type=\"datetime\"\n            value=\"{{ currentDate }}\"\n            min-date=\"{{ minDate }}\"\n            max-date=\"{{ maxDate }}\"\n            bind:input=\"onInput\"\n            />",
+    "body": "<van-datetime-picker\n            type=\"${1|datetime,date,time,year-month|}\"\n            value=\"{{ currentDate }}\"\n            min-date=\"{{ minDate }}\"\n            max-date=\"{{ maxDate }}\"\n            bind:input=\"onInput\"\n            />",
     "description": "Vant datetime-picker"
   },
   "w-vant-field": {

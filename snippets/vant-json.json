@@ -1,1 +1,298 @@
-{"w-vant-button":{"prefix":"wvanb","body":["\"van-button\": \"@vant/weapp/button/index\""],"description":"引入 van-button"},"w-vant-cell":{"prefix":"wvanc","body":["\"van-cell\": \"@vant/weapp/cell/index\""],"description":"引入 van-cell"},"w-vant-cell-group":{"prefix":"wvance","body":["\"van-cell-group\": \"@vant/weapp/cell-group/index\""],"description":"引入 van-cell-group"},"w-vant-config-provider":{"prefix":"wvanco","body":["\"van-config-provider\": \"@vant/weapp/config-provider/index\""],"description":"引入 van-config-provider"},"w-vant-icon":{"prefix":"wvani","body":["\"van-icon\": \"@vant/weapp/icon/index\""],"description":"引入 van-icon"},"w-vant-image":{"prefix":"wvanim","body":["\"van-image\": \"@vant/weapp/image/index\""],"description":"引入 van-image"},"w-vant-row":{"prefix":"wvanr","body":["\"van-row\": \"@vant/weapp/row/index\""],"description":"引入 van-row"},"w-vant-col":{"prefix":"wvancol","body":["\"van-col\": \"@vant/weapp/col/index\""],"description":"引入 van-col"},"w-vant-popup":{"prefix":"wvanp","body":["\"van-popup\": \"@vant/weapp/popup/index\""],"description":"引入 van-popup"},"w-vant-toast":{"prefix":"wvant","body":["\"van-toast\": \"@vant/weapp/toast/index\""],"description":"引入 van-toast"},"w-vant-transition":{"prefix":"wvantr","body":["\"van-transition\": \"@vant/weapp/transition/index\""],"description":"引入 van-transition"},"w-vant-calendar":{"prefix":"wvanca","body":["\"van-calendar\": \"@vant/weapp/calendar/index\""],"description":"引入 van-calendar"},"w-vant-checkbox":{"prefix":"wvanch","body":["\"van-checkbox\": \"@vant/weapp/checkbox/index\",","\"van-checkbox-group\": \"@vant/weapp/checkbox-group/index\""],"description":"引入 van-checkbox"},"w-vant-datetime-picker":{"prefix":"wvand","body":["\"van-datetime-picker\": \"@vant/weapp/datetime-picker/index\""],"description":"引入 van-datetime-picker"},"w-vant-field":{"prefix":"wvanf","body":["\"van-field\": \"@vant/weapp/field/index\""],"description":"引入 van-field"},"w-vant-picker":{"prefix":"wvanpi","body":["\"van-picker\": \"@vant/weapp/picker/index\""],"description":"引入 van-picker"},"w-vant-radio":{"prefix":"wvanra","body":["\"van-radio\": \"@vant/weapp/radio/index\",","\"van-radio-group\": \"@vant/weapp/radio-group/index\""],"description":"引入 van-radio"},"w-vant-rate":{"prefix":"wvanrat","body":["\"van-rate\": \"@vant/weapp/rate/index\""],"description":"引入 van-rate"},"w-vant-search":{"prefix":"wvans","body":["\"van-search\": \"@vant/weapp/search/index\""],"description":"引入 van-search"},"w-vant-slider":{"prefix":"wvansl","body":["\"van-slider\": \"@vant/weapp/slider/index\""],"description":"引入 van-slider"},"w-vant-stepper":{"prefix":"wvanst","body":["\"van-stepper\": \"@vant/weapp/stepper/index\""],"description":"引入 van-stepper"},"w-vant-switch":{"prefix":"wvansw","body":["\"van-switch\": \"@vant/weapp/switch/index\""],"description":"引入 van-switch"},"w-vant-uploader":{"prefix":"wvanu","body":["\"van-uploader\": \"@vant/weapp/uploader/index\""],"description":"引入 van-uploader"},"w-vant-action-sheet":{"prefix":"wvana","body":["\"van-action-sheet\": \"@vant/weapp/action-sheet/index\""],"description":"引入 van-action-sheet"},"w-vant-dialog":{"prefix":"wvandi","body":["\"van-dialog\": \"@vant/weapp/dialog/index\""],"description":"引入 van-dialog"},"w-vant-dropdown-menu":{"prefix":"wvandr","body":["\"van-dropdown-menu\": \"@vant/weapp/dropdown-menu/index\",","\"van-dropdown-item\": \"@vant/weapp/dropdown-item/index\""],"description":"引入 van-dropdown-menu"},"w-vant-loading":{"prefix":"wvanl","body":["\"van-loading\": \"@vant/weapp/loading/index\""],"description":"引入 van-loading"},"w-vant-notify":{"prefix":"wvann","body":["\"van-notify\": \"@vant/weapp/notify/index\""],"description":"引入 van-notify"},"w-vant-overlay":{"prefix":"wvano","body":["\"van-overlay\": \"@vant/weapp/overlay/index\""],"description":"引入 van-overlay"},"w-vant-share-sheet":{"prefix":"wvansh","body":["\"van-share-sheet\": \"@vant/weapp/share-sheet/index\""],"description":"引入 van-share-sheet"},"w-vant-swipe-cell":{"prefix":"wvanswi","body":["\"van-swipe-cell\": \"@vant/weapp/swipe-cell/index\""],"description":"引入 van-swipe-cell"},"w-vant-circle":{"prefix":"wvanci","body":["\"van-circle\": \"@vant/weapp/circle/index\""],"description":"引入 van-circle"},"w-vant-collapse":{"prefix":"wvancoll","body":["\"van-collapse\": \"@vant/weapp/collapse/index\",","\"van-collapse-item\": \"@vant/weapp/collapse-item/index\""],"description":"引入 van-collapse"},"w-vant-count-down":{"prefix":"wvancou","body":["\"van-count-down\": \"@vant/weapp/count-down/index\""],"description":"引入 van-count-down"},"w-vant-divider":{"prefix":"wvandiv","body":["\"van-divider\": \"@vant/weapp/divider/index\""],"description":"引入 van-divider"},"w-vant-empty":{"prefix":"wvane","body":["\"van-empty\": \"@vant/weapp/empty/index\""],"description":"引入 van-empty"},"w-vant-notice-bar":{"prefix":"wvanno","body":["\"van-notice-bar\": \"@vant/weapp/notice-bar/index\""],"description":"引入 van-notice-bar"},"w-vant-progress":{"prefix":"wvanpr","body":["\"van-progress\": \"@vant/weapp/progress/index\""],"description":"引入 van-progress"},"w-vant-skeleton":{"prefix":"wvansk","body":["\"van-skeleton\": \"@vant/weapp/skeleton/index\""],"description":"引入 van-skeleton"},"w-vant-steps":{"prefix":"wvanste","body":["\"van-steps\": \"@vant/weapp/steps/index\""],"description":"引入 van-steps"},"w-vant-sticky":{"prefix":"wvansti","body":["\"van-sticky\": \"@vant/weapp/sticky/index\""],"description":"引入 van-sticky"},"w-vant-tag":{"prefix":"wvanta","body":["\"van-tag\": \"@vant/weapp/tag/index\""],"description":"引入 van-tag"},"w-vant-grid":{"prefix":"wvang","body":["\"van-grid\": \"@vant/weapp/grid/index\",","\"van-grid-item\": \"@vant/weapp/grid-item/index\""],"description":"引入 van-grid"},"w-vant-index-bar":{"prefix":"wvanin","body":["\"van-index-bar\": \"@vant/weapp/index-bar/index\",","\"van-index-anchor\": \"@vant/weapp/index-anchor/index\""],"description":"引入 van-index-bar"},"w-vant-nav-bar":{"prefix":"wvanna","body":["\"van-nav-bar\": \"@vant/weapp/nav-bar/index\""],"description":"引入 van-nav-bar"},"w-vant-sidebar":{"prefix":"wvansi","body":["\"van-sidebar\": \"@vant/weapp/sidebar/index\",","\"van-sidebar-item\": \"@vant/weapp/sidebar-item/index\""],"description":"引入 van-sidebar"},"w-vant-tab":{"prefix":"wvantab","body":["\"van-tab\": \"@vant/weapp/tab/index\",","\"van-tabs\": \"@vant/weapp/tabs/index\""],"description":"引入 van-tab"},"w-vant-tabbar":{"prefix":"wvantabb","body":["\"van-tabbar\": \"@vant/weapp/tabbar/index\",","\"van-tabbar-item\": \"@vant/weapp/tabbar-item/index\""],"description":"引入 van-tabbar"},"w-vant-tree-select":{"prefix":"wvantre","body":["\"van-tree-select\": \"@vant/weapp/tree-select/index\""],"description":"引入 van-tree-select"},"w-vant-area":{"prefix":"wvanar","body":["\"van-area\": \"@vant/weapp/area/index\""],"description":"引入 van-area"},"w-vant-card":{"prefix":"wvancar","body":["\"van-card\": \"@vant/weapp/card/index\""],"description":"引入 van-card"},"w-vant-submit-bar":{"prefix":"wvansu","body":["\"van-submit-bar\": \"@vant/weapp/submit-bar/index\""],"description":"引入 van-submit-bar"},"w-vant-goods-action":{"prefix":"wvango","body":["\"van-goods-action\": \"@vant/weapp/goods-action/index\",","\"van-goods-action-icon\": \"@vant/weapp/goods-action-icon/index\",","\"van-goods-action-button\": \"@vant/weapp/goods-action-button/index\""],"description":"引入 van-goods-action"}}
+{
+  "w-vant-button": {
+    "prefix": "wvanb",
+    "body": ["\"van-button\": \"@vant/weapp/button/index\""],
+    "description": "引入 van-button"
+  },
+  "w-vant-cell": {
+    "prefix": "wvanc",
+    "body": ["\"van-cell\": \"@vant/weapp/cell/index\""],
+    "description": "引入 van-cell"
+  },
+  "w-vant-cell-group": {
+    "prefix": "wvance",
+    "body": ["\"van-cell-group\": \"@vant/weapp/cell-group/index\""],
+    "description": "引入 van-cell-group"
+  },
+  "w-vant-config-provider": {
+    "prefix": "wvanco",
+    "body": ["\"van-config-provider\": \"@vant/weapp/config-provider/index\""],
+    "description": "引入 van-config-provider"
+  },
+  "w-vant-icon": {
+    "prefix": "wvani",
+    "body": ["\"van-icon\": \"@vant/weapp/icon/index\""],
+    "description": "引入 van-icon"
+  },
+  "w-vant-image": {
+    "prefix": "wvanim",
+    "body": ["\"van-image\": \"@vant/weapp/image/index\""],
+    "description": "引入 van-image"
+  },
+  "w-vant-row": {
+    "prefix": "wvanr",
+    "body": ["\"van-row\": \"@vant/weapp/row/index\""],
+    "description": "引入 van-row"
+  },
+  "w-vant-col": {
+    "prefix": "wvancol",
+    "body": ["\"van-col\": \"@vant/weapp/col/index\""],
+    "description": "引入 van-col"
+  },
+  "w-vant-popup": {
+    "prefix": "wvanp",
+    "body": ["\"van-popup\": \"@vant/weapp/popup/index\""],
+    "description": "引入 van-popup"
+  },
+  "w-vant-toast": {
+    "prefix": "wvant",
+    "body": ["\"van-toast\": \"@vant/weapp/toast/index\""],
+    "description": "引入 van-toast"
+  },
+  "w-vant-transition": {
+    "prefix": "wvantr",
+    "body": ["\"van-transition\": \"@vant/weapp/transition/index\""],
+    "description": "引入 van-transition"
+  },
+  "w-vant-calendar": {
+    "prefix": "wvanca",
+    "body": ["\"van-calendar\": \"@vant/weapp/calendar/index\""],
+    "description": "引入 van-calendar"
+  },
+  "w-vant-checkbox": {
+    "prefix": "wvanch",
+    "body": [
+      "\"van-checkbox\": \"@vant/weapp/checkbox/index\",",
+      "\"van-checkbox-group\": \"@vant/weapp/checkbox-group/index\""
+    ],
+    "description": "引入 van-checkbox"
+  },
+  "w-vant-datetime-picker": {
+    "prefix": "wvand",
+    "body": ["\"van-datetime-picker\": \"@vant/weapp/datetime-picker/index\""],
+    "description": "引入 van-datetime-picker"
+  },
+  "w-vant-field": {
+    "prefix": "wvanf",
+    "body": ["\"van-field\": \"@vant/weapp/field/index\""],
+    "description": "引入 van-field"
+  },
+  "w-vant-picker": {
+    "prefix": "wvanpi",
+    "body": ["\"van-picker\": \"@vant/weapp/picker/index\""],
+    "description": "引入 van-picker"
+  },
+  "w-vant-radio": {
+    "prefix": "wvanra",
+    "body": [
+      "\"van-radio\": \"@vant/weapp/radio/index\",",
+      "\"van-radio-group\": \"@vant/weapp/radio-group/index\""
+    ],
+    "description": "引入 van-radio"
+  },
+  "w-vant-rate": {
+    "prefix": "wvanrat",
+    "body": ["\"van-rate\": \"@vant/weapp/rate/index\""],
+    "description": "引入 van-rate"
+  },
+  "w-vant-search": {
+    "prefix": "wvans",
+    "body": ["\"van-search\": \"@vant/weapp/search/index\""],
+    "description": "引入 van-search"
+  },
+  "w-vant-slider": {
+    "prefix": "wvansl",
+    "body": ["\"van-slider\": \"@vant/weapp/slider/index\""],
+    "description": "引入 van-slider"
+  },
+  "w-vant-stepper": {
+    "prefix": "wvanst",
+    "body": ["\"van-stepper\": \"@vant/weapp/stepper/index\""],
+    "description": "引入 van-stepper"
+  },
+  "w-vant-switch": {
+    "prefix": "wvansw",
+    "body": ["\"van-switch\": \"@vant/weapp/switch/index\""],
+    "description": "引入 van-switch"
+  },
+  "w-vant-uploader": {
+    "prefix": "wvanu",
+    "body": ["\"van-uploader\": \"@vant/weapp/uploader/index\""],
+    "description": "引入 van-uploader"
+  },
+  "w-vant-action-sheet": {
+    "prefix": "wvana",
+    "body": ["\"van-action-sheet\": \"@vant/weapp/action-sheet/index\""],
+    "description": "引入 van-action-sheet"
+  },
+  "w-vant-dialog": {
+    "prefix": "wvandi",
+    "body": ["\"van-dialog\": \"@vant/weapp/dialog/index\""],
+    "description": "引入 van-dialog"
+  },
+  "w-vant-dropdown-menu": {
+    "prefix": "wvandr",
+    "body": [
+      "\"van-dropdown-menu\": \"@vant/weapp/dropdown-menu/index\",",
+      "\"van-dropdown-item\": \"@vant/weapp/dropdown-item/index\""
+    ],
+    "description": "引入 van-dropdown-menu"
+  },
+  "w-vant-loading": {
+    "prefix": "wvanl",
+    "body": ["\"van-loading\": \"@vant/weapp/loading/index\""],
+    "description": "引入 van-loading"
+  },
+  "w-vant-notify": {
+    "prefix": "wvann",
+    "body": ["\"van-notify\": \"@vant/weapp/notify/index\""],
+    "description": "引入 van-notify"
+  },
+  "w-vant-overlay": {
+    "prefix": "wvano",
+    "body": ["\"van-overlay\": \"@vant/weapp/overlay/index\""],
+    "description": "引入 van-overlay"
+  },
+  "w-vant-share-sheet": {
+    "prefix": "wvansh",
+    "body": ["\"van-share-sheet\": \"@vant/weapp/share-sheet/index\""],
+    "description": "引入 van-share-sheet"
+  },
+  "w-vant-swipe-cell": {
+    "prefix": "wvanswi",
+    "body": ["\"van-swipe-cell\": \"@vant/weapp/swipe-cell/index\""],
+    "description": "引入 van-swipe-cell"
+  },
+  "w-vant-circle": {
+    "prefix": "wvanci",
+    "body": ["\"van-circle\": \"@vant/weapp/circle/index\""],
+    "description": "引入 van-circle"
+  },
+  "w-vant-collapse": {
+    "prefix": "wvancoll",
+    "body": [
+      "\"van-collapse\": \"@vant/weapp/collapse/index\",",
+      "\"van-collapse-item\": \"@vant/weapp/collapse-item/index\""
+    ],
+    "description": "引入 van-collapse"
+  },
+  "w-vant-count-down": {
+    "prefix": "wvancou",
+    "body": ["\"van-count-down\": \"@vant/weapp/count-down/index\""],
+    "description": "引入 van-count-down"
+  },
+  "w-vant-divider": {
+    "prefix": "wvandiv",
+    "body": ["\"van-divider\": \"@vant/weapp/divider/index\""],
+    "description": "引入 van-divider"
+  },
+  "w-vant-empty": {
+    "prefix": "wvane",
+    "body": ["\"van-empty\": \"@vant/weapp/empty/index\""],
+    "description": "引入 van-empty"
+  },
+  "w-vant-notice-bar": {
+    "prefix": "wvanno",
+    "body": ["\"van-notice-bar\": \"@vant/weapp/notice-bar/index\""],
+    "description": "引入 van-notice-bar"
+  },
+  "w-vant-progress": {
+    "prefix": "wvanpr",
+    "body": ["\"van-progress\": \"@vant/weapp/progress/index\""],
+    "description": "引入 van-progress"
+  },
+  "w-vant-skeleton": {
+    "prefix": "wvansk",
+    "body": ["\"van-skeleton\": \"@vant/weapp/skeleton/index\""],
+    "description": "引入 van-skeleton"
+  },
+  "w-vant-steps": {
+    "prefix": "wvanste",
+    "body": ["\"van-steps\": \"@vant/weapp/steps/index\""],
+    "description": "引入 van-steps"
+  },
+  "w-vant-sticky": {
+    "prefix": "wvansti",
+    "body": ["\"van-sticky\": \"@vant/weapp/sticky/index\""],
+    "description": "引入 van-sticky"
+  },
+  "w-vant-tag": {
+    "prefix": "wvanta",
+    "body": ["\"van-tag\": \"@vant/weapp/tag/index\""],
+    "description": "引入 van-tag"
+  },
+  "w-vant-grid": {
+    "prefix": "wvang",
+    "body": [
+      "\"van-grid\": \"@vant/weapp/grid/index\",",
+      "\"van-grid-item\": \"@vant/weapp/grid-item/index\""
+    ],
+    "description": "引入 van-grid"
+  },
+  "w-vant-index-bar": {
+    "prefix": "wvanin",
+    "body": [
+      "\"van-index-bar\": \"@vant/weapp/index-bar/index\",",
+      "\"van-index-anchor\": \"@vant/weapp/index-anchor/index\""
+    ],
+    "description": "引入 van-index-bar"
+  },
+  "w-vant-nav-bar": {
+    "prefix": "wvanna",
+    "body": ["\"van-nav-bar\": \"@vant/weapp/nav-bar/index\""],
+    "description": "引入 van-nav-bar"
+  },
+  "w-vant-sidebar": {
+    "prefix": "wvansi",
+    "body": [
+      "\"van-sidebar\": \"@vant/weapp/sidebar/index\",",
+      "\"van-sidebar-item\": \"@vant/weapp/sidebar-item/index\""
+    ],
+    "description": "引入 van-sidebar"
+  },
+  "w-vant-tab": {
+    "prefix": "wvantab",
+    "body": [
+      "\"van-tab\": \"@vant/weapp/tab/index\",",
+      "\"van-tabs\": \"@vant/weapp/tabs/index\""
+    ],
+    "description": "引入 van-tab"
+  },
+  "w-vant-tabbar": {
+    "prefix": "wvantabb",
+    "body": [
+      "\"van-tabbar\": \"@vant/weapp/tabbar/index\",",
+      "\"van-tabbar-item\": \"@vant/weapp/tabbar-item/index\""
+    ],
+    "description": "引入 van-tabbar"
+  },
+  "w-vant-tree-select": {
+    "prefix": "wvantre",
+    "body": ["\"van-tree-select\": \"@vant/weapp/tree-select/index\""],
+    "description": "引入 van-tree-select"
+  },
+  "w-vant-area": {
+    "prefix": "wvanar",
+    "body": ["\"van-area\": \"@vant/weapp/area/index\""],
+    "description": "引入 van-area"
+  },
+  "w-vant-card": {
+    "prefix": "wvancar",
+    "body": ["\"van-card\": \"@vant/weapp/card/index\""],
+    "description": "引入 van-card"
+  },
+  "w-vant-submit-bar": {
+    "prefix": "wvansu",
+    "body": ["\"van-submit-bar\": \"@vant/weapp/submit-bar/index\""],
+    "description": "引入 van-submit-bar"
+  },
+  "w-vant-goods-action": {
+    "prefix": "wvango",
+    "body": [
+      "\"van-goods-action\": \"@vant/weapp/goods-action/index\",",
+      "\"van-goods-action-icon\": \"@vant/weapp/goods-action-icon/index\",",
+      "\"van-goods-action-button\": \"@vant/weapp/goods-action-button/index\""
+    ],
+    "description": "引入 van-goods-action"
+  }
+}

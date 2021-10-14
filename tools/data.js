@@ -120,8 +120,8 @@ exports.data = {
             max-date="{{ maxDate }}"
             bind:input="onInput"
             />`,
-        replaceKey: ["datetime"],
-        replaceContent: ["${1|datetime,date,time,year-month|}"],
+        replaceKey: ['type="datetime"'],
+        replaceContent: ['type="${1|datetime,date,time,year-month|}"'],
       },
     },
     field: {
@@ -500,8 +500,8 @@ exports.data = {
           <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
           <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
         </van-tabbar>`,
-        replaceKey: ["line"],
-        replaceContent: ["${1|line,card|}"],
+        replaceKey: [],
+        replaceContent: [],
       },
     },
     "tree-select": {
