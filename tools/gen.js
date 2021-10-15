@@ -16,25 +16,6 @@ let resultData = {
   vantwxss: [],
 };
 
-// 获取prefix
-function getPrefix(dataKey, _prefix, _name) {
-  let name = _name.replace(/-/g, "");
-  let names = name.split("").map((item, idx) => {
-    return name.substr(0, idx + 1);
-  });
-  let result = "";
-  for (let i = 0; i < names.length; i++) {
-    let prefixStr = `${_prefix}${names[i]}`;
-    let idx = resultData[dataKey].findIndex((item) => {
-      return item.prefix == prefixStr;
-    });
-    if (idx == -1) {
-      result = prefixStr;
-      break;
-    }
-  }
-  return result;
-}
 // 格式化wxml
 function formatWxmlText(wxml) {
   if (wxml.replaceKey.length == 0) return wxml.text;
@@ -58,6 +39,20 @@ function formatSnippetsData(arr) {
   return JSON.stringify(result);
 }
 
+// 記錄prefix，用於檢測prefix是否存在重複
+let prefixArr = [];
+Object.keys(data.list).forEach(function (key) {
+  let item = data.list[key];
+  let findIdx = prefixArr.findIndex((findItem) => {
+    return findItem == item.prefix;
+  });
+  if (findIdx == -1) {
+    prefixArr.push(item.prefix);
+  } else {
+    throw new Error(`${item.prefix} 出現重複`);
+  }
+});
+
 Object.keys(data.list).forEach(function (key) {
   let item = data.list[key];
   //   console.log(item);
@@ -66,8 +61,8 @@ Object.keys(data.list).forEach(function (key) {
   // 处理vant-wxss
   if (item["wxss"]) {
     resultData.vantwxss.push({
-      name: `w-vant-${name}`,
-      prefix: getPrefix("vantwxss", "wvan", name),
+      name: `vant-${name}`,
+      prefix: `w${item.prefix}`,
       body: item["wxss"],
       description: `引入 van-${name} 样式`,
     });
@@ -76,8 +71,8 @@ Object.keys(data.list).forEach(function (key) {
   // 处理vant-json
   if (item["json"]) {
     resultData.vantjson.push({
-      name: `w-vant-${name}`,
-      prefix: getPrefix("vantjson", "wvan", name),
+      name: `vant-${name}`,
+      prefix: `w${item.prefix}`,
       body: item["json"],
       description: `引入 van-${name}`,
     });
@@ -86,8 +81,8 @@ Object.keys(data.list).forEach(function (key) {
   // 处理vant-wxml
   if (item["wxml"]) {
     resultData.vantwxml.push({
-      name: `w-vant-${name}`,
-      prefix: getPrefix("vantwxml", "wvan", name),
+      name: `vant-${name}`,
+      prefix: `w${item.prefix}`,
       body: formatWxmlText(item["wxml"]),
       description: `Vant ${name}`,
     });
@@ -96,8 +91,8 @@ Object.keys(data.list).forEach(function (key) {
   // 处理vant-js
   if (item["js"]) {
     resultData.vantjs.push({
-      name: `w-vant-${name}`,
-      prefix: getPrefix("vantjs", "wvan", name),
+      name: `vant-${name}`,
+      prefix: `w${item.prefix}`,
       body: item["js"],
       description: `import ${name}`,
     });
