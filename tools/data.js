@@ -1,18 +1,64 @@
 exports.data = {
   version: "v1.9.0",
   list: {
-    style: {
-      wxss: ['@import "miniprogram_npm/@vant/weapp/common/index.wxss";'],
-    },
     button: {
+      prefix: "vanb",
       json: ['"van-button": "@vant/weapp/button/index"'],
       wxml: {
-        text: '<van-button type="default">默认按钮</van-button>',
-        replaceKey: ["default"],
-        replaceContent: ["${1|primary,info,warning,danger,default|}"],
+        text: '<van-button type="default" size="normal">默认按钮</van-button>',
+        replaceKey: ["default", "normal"],
+        replaceContent: [
+          "${1|primary,info,warning,danger,default|}",
+          "${2|normal,large,small,mini|}",
+        ],
+      },
+    },
+    "button-plain": {
+      prefix: "vanbp",
+      wxml: {
+        text: '<van-button type="default" size="normal" plain>朴素按钮</van-button>',
+        replaceKey: ["default", "normal"],
+        replaceContent: [
+          "${1|primary,info,warning,danger,default|}",
+          "${2|normal,large,small,mini|}",
+        ],
+      },
+    },
+    "button-block": {
+      prefix: "vanbb",
+      wxml: {
+        text: '<van-button type="default" size="normal" block>块级元素按钮</van-button>',
+        replaceKey: ["default", "normal"],
+        replaceContent: [
+          "${1|primary,info,warning,danger,default|}",
+          "${2|normal,large,small,mini|}",
+        ],
+      },
+    },
+    "button-round": {
+      prefix: "vanbr",
+      wxml: {
+        text: '<van-button type="default" size="normal" round>圆形按钮</van-button>',
+        replaceKey: ["default", "normal"],
+        replaceContent: [
+          "${1|primary,info,warning,danger,default|}",
+          "${2|normal,large,small,mini|}",
+        ],
+      },
+    },
+    "button-square": {
+      prefix: "vanbs",
+      wxml: {
+        text: '<van-button type="default" size="normal" square>方形按钮</van-button>',
+        replaceKey: ["default", "normal"],
+        replaceContent: [
+          "${1|primary,info,warning,danger,default|}",
+          "${2|normal,large,small,mini|}",
+        ],
       },
     },
     cell: {
+      prefix: "vanc",
       json: ['"van-cell": "@vant/weapp/cell/index"'],
       wxml: {
         text: '<van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />',
@@ -20,7 +66,16 @@ exports.data = {
         replaceContent: [],
       },
     },
+    "cell-link": {
+      prefix: "vancl",
+      wxml: {
+        text: '<van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" is-link />',
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
     "cell-group": {
+      prefix: "vancg",
       json: ['"van-cell-group": "@vant/weapp/cell-group/index"'],
       wxml: {
         text: "<van-cell-group>${1}</van-cell-group>",
@@ -28,11 +83,21 @@ exports.data = {
         replaceContent: [],
       },
     },
+    "cell-group-inset": {
+      prefix: "vancgi",
+      wxml: {
+        text: "<van-cell-group inset>${1}</van-cell-group>",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
     "config-provider": {
+      prefix: "vancp",
       json: ['"van-config-provider": "@vant/weapp/config-provider/index"'],
       wxml: null,
     },
     icon: {
+      prefix: "vani",
       json: ['"van-icon": "@vant/weapp/icon/index"'],
       wxml: {
         text: '<van-icon name="close" />',
@@ -42,7 +107,18 @@ exports.data = {
         ],
       },
     },
+    "icon-dot": {
+      prefix: "vanid",
+      wxml: {
+        text: '<van-icon name="chat" dot />',
+        replaceKey: ["chat"],
+        replaceContent: [
+          "${1|chat,success,plus,cross,fail,arrow,arrow-left,arrow-up,arrow-down|}",
+        ],
+      },
+    },
     image: {
+      prefix: "vanimg",
       json: ['"van-image": "@vant/weapp/image/index"'],
       wxml: {
         text: '<van-image width="100" height="100" src="${1}" fit="contain" />',
@@ -50,7 +126,24 @@ exports.data = {
         replaceContent: ["${1|contain,cover,fill,widthFix,heightFix,none|}"],
       },
     },
+    "image-round": {
+      prefix: "vanimgr",
+      wxml: {
+        text: '<van-image width="100" height="100" src="${1}" fit="contain" round />',
+        replaceKey: ["contain"],
+        replaceContent: ["${1|contain,cover,fill,widthFix,heightFix,none|}"],
+      },
+    },
+    "image-lazyload": {
+      prefix: "vanimgl",
+      wxml: {
+        text: '<van-image width="100" height="100" src="${1}" fit="contain" lazy-load />',
+        replaceKey: ["contain"],
+        replaceContent: ["${1|contain,cover,fill,widthFix,heightFix,none|}"],
+      },
+    },
     row: {
+      prefix: "vanrow",
       json: ['"van-row": "@vant/weapp/row/index"'],
       wxml: {
         text: "<van-row>${1}</van-row>",
@@ -59,22 +152,33 @@ exports.data = {
       },
     },
     col: {
+      prefix: "vancol",
       json: ['"van-col": "@vant/weapp/col/index"'],
       wxml: {
-        text: '<van-col span="8">span: 8</van-col>',
+        text: '<van-col span="${1}" offset="${2}>span: 8</van-col>',
         replaceKey: [],
         replaceContent: [],
       },
     },
     popup: {
+      prefix: "vanpop",
       json: ['"van-popup": "@vant/weapp/popup/index"'],
       wxml: {
-        text: '<van-popup show="{{ show }}" bind:close="onClose">内容</van-popup>',
-        replaceKey: [],
-        replaceContent: [],
+        text: '<van-popup position="center" show="{{ show }}" bind:close="onClose">内容</van-popup>',
+        replaceKey: ["center"],
+        replaceContent: ["${1|center,top,bottom,right,left|}"],
+      },
+    },
+    "popup-round": {
+      prefix: "vanpr",
+      wxml: {
+        text: '<van-popup position="center" round show="{{ show }}" bind:close="onClose">内容</van-popup>',
+        replaceKey: ["center"],
+        replaceContent: ["${1|center,top,bottom,right,left|}"],
       },
     },
     toast: {
+      prefix: "vanto",
       json: ['"van-toast": "@vant/weapp/toast/index"'],
       wxml: {
         text: '<van-toast id="van-toast" />',
@@ -83,15 +187,42 @@ exports.data = {
       },
       js: ['import Toast from "@vant/weapp/toast/toast"'],
     },
+    "toast-loading": {
+      prefix: "vantol",
+      js: [
+        `
+      Toast.loading({
+        message: '加载中...',
+        forbidClick: true,
+      });
+      `,
+      ],
+    },
+    "toast-success": {
+      prefix: "vantos",
+      js: [`Toast.success('成功文案');`],
+    },
+    "toast-fail": {
+      prefix: "vantof",
+      js: [`Toast.fail('失败文案');`],
+    },
+    "toast-clear": {
+      prefix: "vantoc",
+      js: [`Toast.clear();`],
+    },
     transition: {
+      prefix: "vantr",
       json: ['"van-transition": "@vant/weapp/transition/index"'],
       wxml: {
-        text: '<van-transition show="{{ show }}" custom-class="block">内容</van-transition>',
-        replaceKey: [],
-        replaceContent: [],
+        text: '<van-transition name="fade" show="{{ show }}" custom-class="block">内容</van-transition>',
+        replaceKey: ["fade"],
+        replaceContent: [
+          "${1|fade,fade-up,fade-down,fade-left,fade-right,slide-up,slide-down,slide-left,slide-right|}",
+        ],
       },
     },
     calendar: {
+      prefix: "vancal",
       json: ['"van-calendar": "@vant/weapp/calendar/index"'],
       wxml: {
         text: '<van-calendar type="single" show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />',
@@ -100,6 +231,7 @@ exports.data = {
       },
     },
     checkbox: {
+      prefix: "vancheck",
       json: [
         '"van-checkbox": "@vant/weapp/checkbox/index",',
         '"van-checkbox-group": "@vant/weapp/checkbox-group/index"',
@@ -111,6 +243,7 @@ exports.data = {
       },
     },
     "datetime-picker": {
+      prefix: "vandatetime",
       json: ['"van-datetime-picker": "@vant/weapp/datetime-picker/index"'],
       wxml: {
         text: `<van-datetime-picker
@@ -125,6 +258,7 @@ exports.data = {
       },
     },
     field: {
+      prefix: "vanf",
       json: ['"van-field": "@vant/weapp/field/index"'],
       wxml: {
         text: `<van-field
@@ -139,6 +273,7 @@ exports.data = {
       },
     },
     picker: {
+      prefix: "vanpick",
       json: ['"van-picker": "@vant/weapp/picker/index"'],
       wxml: {
         text: '<van-picker columns="{{ columns }}" bind:change="onChange" />',
@@ -147,6 +282,7 @@ exports.data = {
       },
     },
     radio: {
+      prefix: "vanra",
       json: [
         '"van-radio": "@vant/weapp/radio/index",',
         '"van-radio-group": "@vant/weapp/radio-group/index"',
@@ -161,6 +297,7 @@ exports.data = {
       },
     },
     rate: {
+      prefix: "vanrate",
       json: ['"van-rate": "@vant/weapp/rate/index"'],
       wxml: {
         text: '<van-rate value="{{ value }}" bind:change="onChange" />',
@@ -169,6 +306,7 @@ exports.data = {
       },
     },
     search: {
+      prefix: "vans",
       json: ['"van-search": "@vant/weapp/search/index"'],
       wxml: {
         text: '<van-search value="{{ value }}" placeholder="请输入搜索关键词" />',
@@ -177,6 +315,7 @@ exports.data = {
       },
     },
     slider: {
+      prefix: "vansli",
       json: ['"van-slider": "@vant/weapp/slider/index"'],
       wxml: {
         text: '<van-slider value="50" bind:change="onChange" />',
@@ -185,6 +324,7 @@ exports.data = {
       },
     },
     stepper: {
+      prefix: "vanstepper",
       json: ['"van-stepper": "@vant/weapp/stepper/index"'],
       wxml: {
         text: '<van-stepper value="{{ 1 }}" bind:change="onChange" />',
@@ -193,6 +333,7 @@ exports.data = {
       },
     },
     switch: {
+      prefix: "vanswi",
       json: ['"van-switch": "@vant/weapp/switch/index"'],
       wxml: {
         text: '<van-switch checked="{{ checked }}" bind:change="onChange" />',
@@ -201,6 +342,7 @@ exports.data = {
       },
     },
     uploader: {
+      prefix: "vanupl",
       json: ['"van-uploader": "@vant/weapp/uploader/index"'],
       wxml: {
         text: '<van-uploader accept="image" file-list="{{ fileList }}" bind:after-read="afterRead" />',
@@ -209,6 +351,7 @@ exports.data = {
       },
     },
     "action-sheet": {
+      prefix: "vanac",
       json: ['"van-action-sheet": "@vant/weapp/action-sheet/index"'],
       wxml: {
         text: `<van-action-sheet
@@ -222,6 +365,7 @@ exports.data = {
       },
     },
     dialog: {
+      prefix: "vandia",
       json: ['"van-dialog": "@vant/weapp/dialog/index"'],
       wxml: {
         text: '<van-dialog id="van-dialog" />',
@@ -230,7 +374,42 @@ exports.data = {
       },
       js: ['import Dialog from "@vant/weapp/dialog/dialog";'],
     },
+    "dialog-alert": {
+      prefix: "vandiaalert",
+      js: [
+        `
+      Dialog.alert({
+        title: '标题',
+        message: '弹窗内容',
+      }).then(() => {
+        // on close
+      });
+      `,
+      ],
+    },
+    "dialog-confirm": {
+      prefix: "vandiacon",
+      js: [
+        `
+      Dialog.confirm({
+        title: '标题',
+        message: '弹窗内容',
+      })
+        .then(() => {
+          // on confirm
+        })
+        .catch(() => {
+          // on cancel
+        });
+      `,
+      ],
+    },
+    "dialog-close": {
+      prefix: "vandiaclo",
+      js: ["Dialog.close();"],
+    },
     "dropdown-menu": {
+      prefix: "vandrop",
       json: [
         '"van-dropdown-menu": "@vant/weapp/dropdown-menu/index",',
         '"van-dropdown-item": "@vant/weapp/dropdown-item/index"',
@@ -245,6 +424,7 @@ exports.data = {
       },
     },
     loading: {
+      prefix: "vanload",
       json: ['"van-loading": "@vant/weapp/loading/index"'],
       wxml: {
         text: '<van-loading type="circular" />',
@@ -253,6 +433,7 @@ exports.data = {
       },
     },
     notify: {
+      prefix: "vanno",
       json: ['"van-notify": "@vant/weapp/notify/index"'],
       wxml: {
         text: '<van-notify id="van-notify" />',
@@ -261,7 +442,28 @@ exports.data = {
       },
       js: ['import Notify from "@vant/weapp/notify/notify";'],
     },
+    "notify-primary": {
+      prefix: "vannotifypri",
+      js: ['Notify({ type: "primary", message: "通知内容" });'],
+    },
+    "notify-success": {
+      prefix: "vannotifysuc",
+      js: ['Notify({ type: "success", message: "通知内容" });'],
+    },
+    "notify-danger": {
+      prefix: "vannotifydan",
+      js: ['Notify({ type: "danger", message: "通知内容" });'],
+    },
+    "notify-warning": {
+      prefix: "vannotifywar",
+      js: ['Notify({ type: "warning", message: "通知内容" });'],
+    },
+    "notify-clear": {
+      prefix: "vannotifycle",
+      js: ["Notify.clear();"],
+    },
     overlay: {
+      prefix: "vanover",
       json: ['"van-overlay": "@vant/weapp/overlay/index"'],
       wxml: {
         text: '<van-overlay show="{{ show }}" bind:click="onClickHide" />',
@@ -270,6 +472,7 @@ exports.data = {
       },
     },
     "share-sheet": {
+      prefix: "vanshare",
       json: ['"van-share-sheet": "@vant/weapp/share-sheet/index"'],
       wxml: {
         text: `<van-share-sheet
@@ -284,6 +487,7 @@ exports.data = {
       },
     },
     "swipe-cell": {
+      prefix: "vanswipec",
       json: ['"van-swipe-cell": "@vant/weapp/swipe-cell/index"'],
       wxml: {
         text: `<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
@@ -298,6 +502,7 @@ exports.data = {
       },
     },
     circle: {
+      prefix: "vancir",
       json: ['"van-circle": "@vant/weapp/circle/index"'],
       wxml: {
         text: '<van-circle value="{{ 30 }}" text="text" />',
@@ -306,6 +511,7 @@ exports.data = {
       },
     },
     collapse: {
+      prefix: "vancoll",
       json: [
         '"van-collapse": "@vant/weapp/collapse/index",',
         '"van-collapse-item": "@vant/weapp/collapse-item/index"',
@@ -327,6 +533,7 @@ exports.data = {
       },
     },
     "count-down": {
+      prefix: "vancd",
       json: ['"van-count-down": "@vant/weapp/count-down/index"'],
       wxml: {
         text: '<van-count-down time="{{ time }}" />',
@@ -335,6 +542,7 @@ exports.data = {
       },
     },
     divider: {
+      prefix: "vandiv",
       json: ['"van-divider": "@vant/weapp/divider/index"'],
       wxml: {
         text: "<van-divider />",
@@ -343,6 +551,7 @@ exports.data = {
       },
     },
     empty: {
+      prefix: "vanemp",
       json: ['"van-empty": "@vant/weapp/empty/index"'],
       wxml: {
         text: '<van-empty image="default" description="描述文字" />',
@@ -351,6 +560,7 @@ exports.data = {
       },
     },
     "notice-bar": {
+      prefix: "vannot",
       json: ['"van-notice-bar": "@vant/weapp/notice-bar/index"'],
       wxml: {
         text: `<van-notice-bar
@@ -362,6 +572,7 @@ exports.data = {
       },
     },
     progress: {
+      prefix: "vanpro",
       json: ['"van-progress": "@vant/weapp/progress/index"'],
       wxml: {
         text: '<van-progress percentage="50" />',
@@ -370,6 +581,7 @@ exports.data = {
       },
     },
     skeleton: {
+      prefix: "vanske",
       json: ['"van-skeleton": "@vant/weapp/skeleton/index"'],
       wxml: {
         text: '<van-skeleton title row="3" />',
@@ -378,6 +590,7 @@ exports.data = {
       },
     },
     steps: {
+      prefix: "vansteps",
       json: ['"van-steps": "@vant/weapp/steps/index"'],
       wxml: {
         text: '<van-steps direction="horizontal" steps="{{ steps }}" active="{{ active }}" />',
@@ -386,6 +599,7 @@ exports.data = {
       },
     },
     sticky: {
+      prefix: "vansti",
       json: ['"van-sticky": "@vant/weapp/sticky/index"'],
       wxml: {
         text: "<van-sticky>${1}</van-sticky>",
@@ -394,6 +608,7 @@ exports.data = {
       },
     },
     tag: {
+      prefix: "vantag",
       json: ['"van-tag": "@vant/weapp/tag/index"'],
       wxml: {
         text: '<van-tag type="primary">标签</van-tag>',
@@ -402,6 +617,7 @@ exports.data = {
       },
     },
     grid: {
+      prefix: "vangrid",
       json: [
         '"van-grid": "@vant/weapp/grid/index",',
         '"van-grid-item": "@vant/weapp/grid-item/index"',
@@ -418,6 +634,7 @@ exports.data = {
       },
     },
     "index-bar": {
+      prefix: "vangind",
       json: [
         '"van-index-bar": "@vant/weapp/index-bar/index",',
         '"van-index-anchor": "@vant/weapp/index-anchor/index"',
@@ -443,6 +660,7 @@ exports.data = {
       },
     },
     "nav-bar": {
+      prefix: "vannavb",
       json: ['"van-nav-bar": "@vant/weapp/nav-bar/index"'],
       wxml: {
         text: `<van-nav-bar
@@ -458,6 +676,7 @@ exports.data = {
       },
     },
     sidebar: {
+      prefix: "vansideb",
       json: [
         '"van-sidebar": "@vant/weapp/sidebar/index",',
         '"van-sidebar-item": "@vant/weapp/sidebar-item/index"',
@@ -473,6 +692,7 @@ exports.data = {
       },
     },
     tab: {
+      prefix: "vantab",
       json: [
         '"van-tab": "@vant/weapp/tab/index",',
         '"van-tabs": "@vant/weapp/tabs/index"',
@@ -489,6 +709,7 @@ exports.data = {
       },
     },
     tabbar: {
+      prefix: "vantabb",
       json: [
         '"van-tabbar": "@vant/weapp/tabbar/index",',
         '"van-tabbar-item": "@vant/weapp/tabbar-item/index"',
@@ -505,6 +726,7 @@ exports.data = {
       },
     },
     "tree-select": {
+      prefix: "vantrees",
       json: ['"van-tree-select": "@vant/weapp/tree-select/index"'],
       wxml: {
         text: `<van-tree-select
@@ -519,6 +741,7 @@ exports.data = {
       },
     },
     area: {
+      prefix: "vanarea",
       json: ['"van-area": "@vant/weapp/area/index"'],
       wxml: {
         text: '<van-area area-list="{{ areaList }}" />',
@@ -527,6 +750,7 @@ exports.data = {
       },
     },
     card: {
+      prefix: "vancard",
       json: ['"van-card": "@vant/weapp/card/index"'],
       wxml: {
         text: `<van-card
@@ -541,6 +765,7 @@ exports.data = {
       },
     },
     "submit-bar": {
+      prefix: "vansubm",
       json: ['"van-submit-bar": "@vant/weapp/submit-bar/index"'],
       wxml: {
         text: `<van-submit-bar
@@ -553,6 +778,7 @@ exports.data = {
       },
     },
     "goods-action": {
+      prefix: "vangood",
       json: [
         '"van-goods-action": "@vant/weapp/goods-action/index",',
         '"van-goods-action-icon": "@vant/weapp/goods-action-icon/index",',
@@ -569,6 +795,83 @@ exports.data = {
           />
           <van-goods-action-button text="立即购买" bind:click="onClickButton" />
         </van-goods-action>`,
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    // 內置樣式
+    style: {
+      wxss: ['@import "miniprogram_npm/@vant/weapp/common/index.wxss";'],
+    },
+    "van-ellipsis": {
+      prefix: "vanellipsis",
+      wxml: {
+        text: "van-ellipsis",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-multi-ellipsis--l2": {
+      prefix: "vanellipsisl2",
+      wxml: {
+        text: "van-multi-ellipsis--l2",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-multi-ellipsis--l3": {
+      prefix: "vanellipsisl3",
+      autoPrefix: false,
+      wxml: {
+        text: "van-multi-ellipsis--l3",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--top": {
+      prefix: "vanhairlinetop",
+      wxml: {
+        text: "van-hairline--top",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--bottom": {
+      prefix: "vanhairlinebottom",
+      wxml: {
+        text: "van-hairline--bottom",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--left": {
+      prefix: "vanhairlineleft",
+      wxml: {
+        text: "van-hairline--left",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--right": {
+      prefix: "vanhairlineright",
+      wxml: {
+        text: "van-hairline--right",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--top-bottom": {
+      prefix: "vanhairlinetopbottom",
+      wxml: {
+        text: "van-hairline--top-bottom",
+        replaceKey: [],
+        replaceContent: [],
+      },
+    },
+    "van-hairline--surround": {
+      prefix: "vanhairlinesurround",
+      wxml: {
+        text: "van-hairline--surround",
         replaceKey: [],
         replaceContent: [],
       },
