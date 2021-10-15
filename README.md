@@ -1,6 +1,7 @@
 ## This is Code Snippets of Vant Weapp for VS Code. (Vant Weapp Version: v1.9.0)
 ### Git: 
 [Vant Weapp Snippets - Github](https://github.com/sannyzeng/vant-weapp-snippets) 
+
 [Vant Weapp Snippets - Gitee](https://gitee.com/sannyzeng/vant-weapp-snippets) 
 
 ### Thanks: 
