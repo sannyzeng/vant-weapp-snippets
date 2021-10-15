@@ -12,6 +12,7 @@
 2. 支持在 app.json/page.json `usingComponents` 中导入模块，例如 `wvanb` ，输出 `"van-button": "@vant/weapp/button/index"`。
 3. 支持 wxss 快速导入公共样式，`wvans`，输出`@import '@vant/weapp/common/index.wxss';`。
 4. 支持 js 中快速导入 Toast 等模块，`wvant`，输出`import Toast from '@vant/weapp/dist/toast/toast';`
+5. 支持微信开发者工具。
 
 ### WXML/JSON
 |  No.  | Trigger&nbsp;Key | Vant Tag                |
