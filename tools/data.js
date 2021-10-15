@@ -2,7 +2,7 @@ exports.data = {
   version: "v1.9.0",
   list: {
     style: {
-      wxss: ['@import "@vant/weapp/common/index.wxss";'],
+      wxss: ['@import "miniprogram_npm/@vant/weapp/common/index.wxss";'],
     },
     button: {
       json: ['"van-button": "@vant/weapp/button/index"'],
@@ -81,7 +81,7 @@ exports.data = {
         replaceKey: [],
         replaceContent: [],
       },
-      js: ['import Toast from "@vant/weapp/dist/toast/toast"'],
+      js: ['import Toast from "@vant/weapp/toast/toast"'],
     },
     transition: {
       json: ['"van-transition": "@vant/weapp/transition/index"'],
@@ -228,7 +228,7 @@ exports.data = {
         replaceKey: [],
         replaceContent: [],
       },
-      js: ['import Dialog from "@vant/weapp/dist/dialog/dialog";'],
+      js: ['import Dialog from "@vant/weapp/dialog/dialog";'],
     },
     "dropdown-menu": {
       json: [
@@ -259,7 +259,7 @@ exports.data = {
         replaceKey: [],
         replaceContent: [],
       },
-      js: ['import Notify from "@vant/weapp/dist/notify/notify";'],
+      js: ['import Notify from "@vant/weapp/notify/notify";'],
     },
     overlay: {
       json: ['"van-overlay": "@vant/weapp/overlay/index"'],
