@@ -1,1 +1,1 @@
-{"w-vant-style":{"prefix":"wvans","body":["@import \"miniprogram_npm/@vant/weapp/common/index.wxss\";"],"description":"引入 van-style 样式"}}
+{"vant-style":{"prefix":"wundefined","body":["@import \"miniprogram_npm/@vant/weapp/common/index.wxss\";"],"description":"引入 van-style 样式"}}
