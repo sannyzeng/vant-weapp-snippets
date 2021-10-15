@@ -170,7 +170,7 @@ exports.data = {
       },
     },
     "popup-round": {
-      prefix: "vanpr",
+      prefix: "vanpopr",
       wxml: {
         text: '<van-popup position="center" round show="{{ show }}" bind:close="onClose">内容</van-popup>',
         replaceKey: ["center"],
@@ -634,7 +634,7 @@ exports.data = {
       },
     },
     "index-bar": {
-      prefix: "vangind",
+      prefix: "vanind",
       json: [
         '"van-index-bar": "@vant/weapp/index-bar/index",',
         '"van-index-anchor": "@vant/weapp/index-anchor/index"',
