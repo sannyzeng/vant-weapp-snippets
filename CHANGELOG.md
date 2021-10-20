@@ -1,7 +1,9 @@
-<!--
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-12 08:44:25
- * @LastEditTime: 2019-08-13 14:22:29
- * @LastEditors: Please set LastEditors
- -->
+# Change Log
+
+All notable changes to the "vant-weapp-snippets" extension will be documented in this file.
+
+Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+
+## [Unreleased]
+
+- Initial release

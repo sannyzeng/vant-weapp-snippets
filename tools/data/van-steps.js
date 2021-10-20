@@ -1,0 +1,91 @@
+exports.data = {
+  json: {
+    kind: "Snippet",
+    body: ['"van-steps": "@vant/weapp/steps/index"'],
+    detail: "Steps 步骤条",
+    documentation: `在app.json或index.json中引入组件`,
+  },
+  wxml: {
+    kind: "Snippet",
+    body: [
+      '<van-steps steps="{{ ${1:steps} }}" active="{{ ${2:active} }}"${3} />',
+    ],
+    detail: "Steps 步骤条",
+    documentation: `用于展示操作流程的各个环节，让用户了解当前的操作在整体流程中的位置。`,
+    attrs: [
+      {
+        kind: "Field",
+        body: ["active="],
+        detail: "active",
+        documentation: "当前步骤",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["direction="],
+        detail: "direction",
+        documentation: "显示方向，可选值为 horizontal vertical",
+        vals: {
+          kind: "Value",
+          body: ["horizontal", "vertical"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["active-color="],
+        detail: "active-color",
+        documentation: "激活状态颜色",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["inactive-color="],
+        detail: "inactive-color",
+        documentation: "未激活状态颜色",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["active-icon="],
+        detail: "active-icon",
+        documentation: "激活状态底部图标，可选值见 Icon 组件",
+        vals: {
+          kind: "Value",
+          body: ["checked"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["inactive-icon="],
+        detail: "inactive-icon",
+        documentation: "未激活状态底部图标，可选值见 Icon 组件",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:click-step="],
+        detail: "bind:click-step",
+        documentation: "点击步骤时触发的事件",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["desc-class="],
+        detail: "desc-class",
+        documentation: "描述信息样式类",
+        vals: null,
+      },
+    ],
+  },
+};

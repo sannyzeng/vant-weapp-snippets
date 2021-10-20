@@ -1,0 +1,85 @@
+exports.data = {
+  json: {
+    kind: "Snippet",
+    body: ['"van-count-down": "@vant/weapp/count-down/index"'],
+    detail: "CountDown 倒计时",
+    documentation: `在app.json或index.json中引入组件`,
+  },
+  wxml: {
+    kind: "Snippet",
+    body: ['<van-count-down time="{{ ${1:time} }}"${2} />'],
+    detail: "CountDown 倒计时",
+    documentation: `用于实时展示倒计时数值，支持毫秒精度。`,
+    attrs: [
+      {
+        kind: "Field",
+        body: ["time="],
+        detail: "time",
+        documentation: "倒计时时长，单位毫秒",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["format="],
+        detail: "format",
+        documentation: "时间格式，DD-日，HH-时，mm-分，ss-秒，SSS-毫秒",
+        vals: {
+          kind: "Value",
+          body: ["HH:mm:ss"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["auto-start="],
+        detail: "auto-start",
+        documentation: "是否自动开始倒计时",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["millisecond="],
+        detail: "millisecond",
+        documentation: "是否开启毫秒级渲染",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["use-slot="],
+        detail: "use-slot",
+        documentation: "是否使用自定义样式插槽",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Event",
+        body: ["bind:finish="],
+        detail: "bind:finish",
+        documentation: "倒计时结束时触发",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:change="],
+        detail: "bind:change",
+        documentation: "时间变化时触发，仅在开启use-slot后才会触发",
+        vals: null,
+      },
+    ],
+  },
+};

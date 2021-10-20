@@ -1,7 +1,11 @@
 {
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
-  "version": "0.0.5",
+  "description": "Vant Weapp Snippets for VS Code",
+  "version": "0.0.6",
+  "engines": {
+    "vscode": "^1.61.0"
+  },
   "publisher": "Kenzeng",
   "author": {
     "name": "Kenzeng"
@@ -9,7 +13,7 @@
   "categories": [
     "Snippets"
   ],
-  "description": "Vant Weapp Snippets for VS Code",
+  
   "icon": "images/logo.png",
   "keywords": [
     "vant",
@@ -28,27 +32,9 @@
     "onLanguage:css",
     "onLanguage:wxss"
   ],
-  "engines": {
-    "vscode": "^1.0.0"
-  },
-  "main": "./out/extension",
-  "devDependencies": {
-    "vscode": "0.10.x"
-  },
-  "scripts": {
-    "gen": "node ./tools/gen",
-    "build": "vsce package",
-    "publish": "vsce publish"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sannyzeng/vant-weapp-snippets/issues",
-    "email": "juerui@vip.qq.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sannyzeng/vant-weapp-snippets"
-  },
+  
+  "main": "./src/extension.js",
+  
   "contributes": {
     "languages": [
       {
@@ -102,5 +88,33 @@
       }
     ]
   },
-  "dependencies": {}
+  
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js",
+    "gen": "node ./tools/gen",
+    "build": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.61.0",
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "eslint": "^7.32.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.1",
+    "typescript": "^4.4.3",
+    "@vscode/test-electron": "^1.6.2"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sannyzeng/vant-weapp-snippets/issues",
+    "email": "sannyzeng@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sannyzeng/vant-weapp-snippets"
+  }
 }

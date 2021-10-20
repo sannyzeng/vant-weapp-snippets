@@ -1,0 +1,75 @@
+exports.data = {
+  json: {
+    kind: "Snippet",
+    body: ['"van-collapse": "@vant/weapp/collapse/index"'],
+    detail: "Collapse 折叠面板",
+    documentation: `在app.json或index.json中引入组件`,
+  },
+  wxml: {
+    kind: "Snippet",
+    body: ['<van-collapse value="{{ ${1:activeNames} }}"${2}></van-collapse>'],
+    detail: "Collapse 折叠面板",
+    documentation: `将一组内容放置在多个折叠面板中，点击面板的标题可以展开或收缩其内容。`,
+    attrs: [
+      {
+        kind: "Field",
+        body: ["value="],
+        detail: "value",
+        documentation: "当前展开面板的 name",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["accordion="],
+        detail: "accordion",
+        documentation: "是否开启手风琴模式",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
+        body: ["border="],
+        detail: "border",
+        documentation: "是否显示外边框",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Event",
+        body: ["bind:change="],
+        detail: "bind:change",
+        documentation: "切换面板时触发",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:open="],
+        detail: "bind:open",
+        documentation: "展开面板时触发",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:close="],
+        detail: "bind:close",
+        documentation: "关闭面板时触发",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+    ],
+  },
+};

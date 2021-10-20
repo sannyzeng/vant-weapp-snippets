@@ -1,1 +1,1 @@
-{"vant-style":{"prefix":"wundefined","body":["@import \"miniprogram_npm/@vant/weapp/common/index.wxss\";"],"description":"引入 van-style 样式"}}
+{"van-common-style":{"prefix":"van-common-style","body":["@import \"miniprogram_npm/@vant/weapp/common/index.wxss\";"],"description":"在 app.wxss 中引入内置样式。"}}

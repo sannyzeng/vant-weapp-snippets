@@ -16,16 +16,6 @@ let resultData = {
   vantwxss: [],
 };
 
-// 格式化wxml
-function formatWxmlText(wxml) {
-  if (wxml.replaceKey.length == 0) return wxml.text;
-  let text = wxml.text;
-  for (let i = 0; i < wxml.replaceKey.length; i++) {
-    text = text.replace(wxml.replaceKey[i], wxml.replaceContent[i]);
-  }
-  return text;
-}
-
 // 格式化數據
 function formatSnippetsData(arr) {
   let result = {};
@@ -39,63 +29,61 @@ function formatSnippetsData(arr) {
   return JSON.stringify(result);
 }
 
-// 記錄prefix，用於檢測prefix是否存在重複
-let prefixArr = [];
-Object.keys(data.list).forEach(function (key) {
-  let item = data.list[key];
-  let findIdx = prefixArr.findIndex((findItem) => {
-    return findItem == item.prefix;
-  });
-  if (findIdx == -1) {
-    prefixArr.push(item.prefix);
-  } else {
-    throw new Error(`${item.prefix} 出現重複`);
-  }
-});
-
 Object.keys(data.list).forEach(function (key) {
   let item = data.list[key];
   //   console.log(item);
   let name = key;
 
   // 处理vant-wxss
-  if (item["wxss"]) {
+  if (item["wxss"] && item["wxss"].body) {
     resultData.vantwxss.push({
-      name: `vant-${name}`,
-      prefix: `w${item.prefix}`,
-      body: item["wxss"],
-      description: `引入 van-${name} 样式`,
+      name: `${name}`,
+      prefix: `${name}`,
+      body: item["wxss"].body,
+      description: item["wxss"].documentation,
     });
   }
 
   // 处理vant-json
-  if (item["json"]) {
+  if (item["json"] && item["json"].body) {
     resultData.vantjson.push({
-      name: `vant-${name}`,
-      prefix: `w${item.prefix}`,
-      body: item["json"],
-      description: `引入 van-${name}`,
+      name: `${name}`,
+      prefix: `${name}`,
+      body: item["json"].body,
+      description: item["json"].documentation,
     });
   }
 
   // 处理vant-wxml
-  if (item["wxml"]) {
+  if (item["wxml"] && item["wxml"].body) {
     resultData.vantwxml.push({
-      name: `vant-${name}`,
-      prefix: `w${item.prefix}`,
-      body: formatWxmlText(item["wxml"]),
-      description: `Vant ${name}`,
+      name: `${name}`,
+      prefix: `${name}`,
+      body: item["wxml"].body,
+      description: item["wxml"].documentation,
     });
   }
 
   // 处理vant-js
-  if (item["js"]) {
+  if (item["js"] && item["js"].body) {
     resultData.vantjs.push({
-      name: `vant-${name}`,
-      prefix: `w${item.prefix}`,
-      body: item["js"],
-      description: `import ${name}`,
+      name: `${name}`,
+      prefix: `import ${name}`,
+      body: item["js"].body,
+      description: item["js"].documentation,
     });
+  }
+
+  // 处理functions
+  if (item["functions"] && item["functions"].length > 0) {
+    for (let i = 0; i < item["functions"].length; i++) {
+      resultData.vantjs.push({
+        name: `${item["functions"][i].detail}`,
+        prefix: `${item["functions"][i].detail}`,
+        body: item["functions"][i].body,
+        description: item["functions"][i].documentation,
+      });
+    }
   }
 });
 
