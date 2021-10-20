@@ -2,7 +2,7 @@
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
   "description": "Vant Weapp Snippets for VS Code",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.61.0"
   },
@@ -13,7 +13,6 @@
   "categories": [
     "Snippets"
   ],
-  
   "icon": "images/logo.png",
   "keywords": [
     "vant",
@@ -32,9 +31,7 @@
     "onLanguage:css",
     "onLanguage:wxss"
   ],
-  
   "main": "./src/extension.js",
-  
   "contributes": {
     "languages": [
       {
@@ -88,7 +85,6 @@
       }
     ]
   },
-  
   "scripts": {
     "lint": "eslint .",
     "pretest": "yarn run lint",
