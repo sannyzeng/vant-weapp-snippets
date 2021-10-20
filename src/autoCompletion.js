@@ -28,10 +28,10 @@ function provideCompletionItems(document, position, token, context) {
   let attrName = attrNameMatch
     ? attrNameMatch[0].replace(/[\s|=|\"|\']/g, "")
     : "";
-  console.log(text, text.length);
-  console.log("tagName,attrName:", tagName, attrName);
-  console.log(tagName != "" && attrName == "");
-  console.log("line:", line._text);
+  // console.log(text, text.length);
+  // console.log("tagName,attrName:", tagName, attrName);
+  // console.log(tagName != "" && attrName == "");
+  // console.log("line:", line._text);
 
   // class
   if (attrName == "class") {
@@ -92,7 +92,7 @@ function provideCompletionItems(document, position, token, context) {
           return completionItem;
         });
       } else {
-        return "";
+        return [];
       }
     }
   }
