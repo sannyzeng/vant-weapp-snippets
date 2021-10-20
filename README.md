@@ -15,13 +15,13 @@
 5. 支持自动补全
 
 ### WXML
-![image](https://github.com/sannyzeng/vant-weapp-snippets/blob/master/images/wxml.gif)
+![image](https://image.shouxiansen.com/upload_f1dfefe0c4d7d849fb9e3051985de2ca.gif)
 
 ### WXSS
-![image](https://github.com/sannyzeng/vant-weapp-snippets/blob/master/images/wxss.gif)
+![image](https://image.shouxiansen.com/upload_c472b5dccce0421b8d90a8306bb918fc.gif)
 
 ### JS
-![image](https://github.com/sannyzeng/vant-weapp-snippets/blob/master/images/js.gif)
+![image](https://image.shouxiansen.com/upload_2d427d022a8aed727efa883beefb0542.gif)
 
 ### JSON
-![image](https://github.com/sannyzeng/vant-weapp-snippets/blob/master/images/json.gif)
+![image](https://image.shouxiansen.com/upload_637436fcbcf3e4d5bcd5b7cdc5b9645e.gif)
