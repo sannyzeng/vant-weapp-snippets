@@ -13,7 +13,7 @@ exports.data = {
   },
   js: {
     kind: "Snippet",
-    body: ['import Toast from "@vant/weapp/toast/toast"'],
+    body: ['import Toast from "@vant/weapp/toast/toast";'],
     detail: "Toast 轻提示",
     documentation: `import Toast`,
   },

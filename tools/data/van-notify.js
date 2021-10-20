@@ -35,7 +35,7 @@ exports.data = {
     {
       kind: "Function",
       body: [
-        "Notify({message: '${1:自定义颜色}',color: '${2:#ad0000}',background:'${3:#ffe1e1}',duration: ${4:1000},selector: '${5:selector: '#custom-selector'}'});",
+        "Notify({message: '${1:自定义颜色}',color: '${2:#ad0000}',background:'${3:#ffe1e1}',duration: ${4:1000},selector: '${5:#custom-selector}'});",
       ],
       detail: "Notify.custom",
       documentation:
