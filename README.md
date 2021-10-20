@@ -1,4 +1,4 @@
-## This is Code Snippets of Vant Weapp for VS Code. (Vant Weapp Version: v1.9.0)
+## This is Code Snippets of Vant Weapp for VS Code. (Vant Weapp Version: v1.9.1)
 ### Git: 
 [Vant Weapp Snippets - Github](https://github.com/sannyzeng/vant-weapp-snippets) 
 
