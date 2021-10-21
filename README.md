@@ -13,6 +13,7 @@
 3. 支持 wxss 快速导入公共样式。
 4. 支持 js 中快速导入以及使用 Toast、Dialog、Notify 等模块。
 5. 支持自动补全
+6. 支持slot提示
 
 ### WXML
 ![image](https://image.shouxiansen.com/upload_f1dfefe0c4d7d849fb9e3051985de2ca.gif)
