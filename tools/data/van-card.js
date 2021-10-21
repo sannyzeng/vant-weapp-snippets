@@ -194,5 +194,35 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: [
+        "title",
+        "desc",
+        "num",
+        "price",
+        "origin-priceprice-top",
+        "bottom",
+        "thumb",
+        "tag",
+        "tags",
+        "footer",
+      ],
+      detail: "Card 商品卡片 Slot",
+      documentation: `
+      title	自定义标题栏，如果设置了title属性则不生效
+      desc	自定义描述栏，如果设置了desc属性则不生效
+      num	自定义数量
+      price	自定义价格
+      origin-price	自定义商品原价，如果设置了origin-price属性则不生效
+      price-top	自定义价格上方区域
+      bottom	自定义价格下方区域
+      thumb	自定义图片，如果设置了thumb属性则不生效
+      tag	自定义图片角标，如果设置了tag属性则不生效
+      tags	自定义描述下方标签区域
+      footer	自定义右下角内容
+      `,
+      vals: null,
+    },
   },
 };

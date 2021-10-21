@@ -135,5 +135,14 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["icon"],
+      detail: "Checkbox 复选框 Slot",
+      documentation: `
+      icon	自定义图标
+      `,
+      vals: null,
+    },
   },
 };

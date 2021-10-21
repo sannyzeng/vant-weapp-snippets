@@ -57,5 +57,15 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["icon", "icon-active"],
+      detail: "Tabbar 标签栏Item Slot",
+      documentation: `
+      icon	未选中时的图标
+      icon-active	选中时的图标
+      `,
+      vals: null,
+    },
   },
 };

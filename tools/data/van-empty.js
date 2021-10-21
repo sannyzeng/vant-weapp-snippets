@@ -32,5 +32,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["image", "description"],
+      detail: "Empty 空状态 Slot",
+      documentation: `
+      -	自定义底部内容
+      image	自定义图标
+      description	自定义描述文字
+      `,
+      vals: null,
+    },
   },
 };

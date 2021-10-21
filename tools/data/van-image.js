@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ['<van-image src="${1}"${2} />'],
+    body: ['<van-image src="${1}"${2}>${3}</van-image>'],
     detail: "Image 图片",
     documentation: `增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示。`,
     attrs: [
@@ -199,5 +199,15 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["loading", "error"],
+      detail: "Image 图片 Slot",
+      documentation: `
+      loading	自定义加载中的提示内容
+      error	自定义加载失败时的提示内容
+      `,
+      vals: null,
+    },
   },
 };

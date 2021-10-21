@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ['<van-stepper value="{{ ${1:1} }}"${2} />'],
+    body: ['<van-stepper value="{{ ${1:1} }}"${2}>${3}</van-stepper>'],
     detail: "Stepper 步进器",
     documentation: `步进器由增加按钮、减少按钮和输入框组成，用于在一定范围内输入、调整数字。`,
     attrs: [
@@ -259,5 +259,15 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["plus", "minus"],
+      detail: "Stepper 步进器 Slot",
+      documentation: `
+      plus	加号按钮
+      minus	减号按钮
+      `,
+      vals: null,
+    },
   },
 };

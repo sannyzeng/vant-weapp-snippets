@@ -117,5 +117,14 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["content"],
+      detail: "TreeSelect 分类选择 Slot",
+      documentation: `
+      content	自定义右侧区域内容，如果存在 items，则插入在顶部
+      `,
+      vals: null,
+    },
   },
 };

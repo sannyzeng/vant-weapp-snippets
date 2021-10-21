@@ -223,5 +223,15 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["nav-left", "nav-right"],
+      detail: "Tab 标签页 Tabs Slot",
+      documentation: `
+      nav-left	标题左侧内容
+      nav-right	标题右侧内容
+      `,
+      vals: null,
+    },
   },
 };

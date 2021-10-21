@@ -114,5 +114,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["icon", "text"],
+      detail: "Grid 宫格Item Slot",
+      documentation: `
+      -	自定义宫格的所有内容，需要设置use-slot属性
+      icon	自定义图标，如果设置了use-slot或者icon属性则不生效
+      text	自定义文字，如果设置了use-slot或者text属性则不生效
+      `,
+      vals: null,
+    },
   },
 };

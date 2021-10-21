@@ -88,5 +88,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["left", "right"],
+      detail: "SwipeCell 滑动单元格 Slot",
+      documentation: `
+      -	自定义显示内容
+      left	左侧滑动内容
+      right	右侧滑动内容
+      `,
+      vals: null,
+    },
   },
 };

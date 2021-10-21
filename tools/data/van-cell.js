@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ["<van-cell${1}/>"],
+    body: ["<van-cell${1}>${2}</van-cell>"],
     detail: "Cell 单元格",
     documentation: `单元格为列表中的单个展示项。`,
     attrs: [
@@ -205,5 +205,18 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["title", "label", "icon", "right-icon"],
+      detail: "Cell 单元格 Slot",
+      documentation: `
+      -	自定义value显示内容，如果设置了value属性则不生效
+      title	自定义title显示内容，如果设置了title属性则不生效
+      label	自定义label显示内容，需要设置 use-label-slot属性
+      icon	自定义icon显示内容，如果设置了icon属性则不生效
+      right-icon	自定义右侧按钮，默认是arrow，如果设置了is-link属性则不生效
+      `,
+      vals: null,
+    },
   },
 };

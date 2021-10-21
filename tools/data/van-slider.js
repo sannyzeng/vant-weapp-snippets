@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ["<van-slider${1} />"],
+    body: ["<van-slider${1}>${2}</van-slider>"],
     detail: "Slider 滑块",
     documentation: `滑动输入条，用于在给定的范围内选择一个值。`,
     attrs: [
@@ -144,5 +144,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["button", "left-button", "right-button"],
+      detail: "Slider 滑块 Slot",
+      documentation: `
+      button	自定义滑块按钮	{ value: number }
+      left-button v1.8.4	自定义左侧滑块按钮（双滑块模式下）	{ value: number }
+      right-button v1.8.4	自定义右侧滑块按钮 （双滑块模式下）	{ value: number }
+      `,
+      vals: null,
+    },
   },
 };

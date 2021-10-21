@@ -111,5 +111,18 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["value", "icon", "title", "right-icon"],
+      detail: "Collapse 折叠面板Item Slot",
+      documentation: `
+      -	面板内容
+      value	自定义显示内容
+      icon	自定义icon
+      title	自定义title
+      right-icon	自定义右侧按钮，默认是arrow
+      `,
+      vals: null,
+    },
   },
 };

@@ -135,5 +135,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["title", "left", "right"],
+      detail: "NavBar 导航栏 Slot",
+      documentation: `
+      title	自定义标题
+      left	自定义左侧区域内容
+      right	自定义右侧区域内容
+      `,
+      vals: null,
+    },
   },
 };

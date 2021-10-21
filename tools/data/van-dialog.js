@@ -7,9 +7,18 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ['<van-dialog id="van-dialog" />'],
+    body: ['<van-dialog id="van-dialog">${1}</van-dialog>'],
     detail: "Dialog 弹出框",
     documentation: `弹出模态框，常用于消息提示、消息确认，或在当前页面内完成特定的交互操作，支持函数调用和组件调用两种方式。`,
+    slot: {
+      kind: "Value",
+      body: ["title"],
+      detail: "Dialog 弹出框 Slot",
+      documentation: `
+      title	自定义title显示内容，如果设置了title属性则不生效
+      `,
+      vals: null,
+    },
   },
   js: {
     kind: "Snippet",

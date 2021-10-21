@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ['<van-calendar show="{{ ${1:show} }}"${2} />'],
+    body: ['<van-calendar show="{{ ${1:show} }}"${2}>${3}</van-calendar>'],
     detail: "Calendar 日历",
     documentation: "日历组件用于选择日期或日期区间。",
     attrs: [
@@ -326,5 +326,15 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["title", "footer"],
+      detail: "Calendar 日历 Slot",
+      documentation: `
+      title	自定义标题
+      footer	自定义底部区域内容
+      `,
+      vals: null,
+    },
   },
 };

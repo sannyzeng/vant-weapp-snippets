@@ -64,5 +64,14 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["title"],
+      detail: "Sidebar 侧边导航Item Slot",
+      documentation: `
+      title	自定义标题栏，如果设置了title属性则不生效
+      `,
+      vals: null,
+    },
   },
 };

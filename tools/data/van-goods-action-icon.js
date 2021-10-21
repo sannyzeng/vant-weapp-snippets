@@ -185,5 +185,14 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["icon"],
+      detail: "GoodsAction 商品导航 GoodsActionIcon Slot",
+      documentation: `
+      icon	自定义图标
+      `,
+      vals: null,
+    },
   },
 };

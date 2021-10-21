@@ -8,7 +8,7 @@ exports.data = {
   wxml: {
     kind: "Snippet",
     body: [
-      '<van-field value="{{ ${1:value} }}" border="{{ ${2:false} }}"${3} />',
+      '<van-field value="{{ ${1:value} }}" border="{{ ${2:false} }}"${3}>${4}</van-field>',
     ],
     detail: "Field 输入框",
     documentation: "用户可以在文本框内输入或编辑文字。",
@@ -543,5 +543,18 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["label", "left-icon", "right-icon", "button", "input"],
+      detail: "Field 输入框 Slot",
+      documentation: `
+      label	自定义输入框标签，如果设置了label属性则不生效
+      left-icon	自定义输入框头部图标
+      right-icon	自定义输入框尾部图标
+      button	自定义输入框尾部按钮
+      input	自定义输入框，使用此插槽后，与输入框相关的属性和事件将失效
+      `,
+      vals: null,
+    },
   },
 };

@@ -130,5 +130,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["left-icon", "right-icon"],
+      detail: "NoticeBar 通知栏 Slot",
+      documentation: `
+      -	通知文本内容，仅在 text 属性为空时有效
+      left-icon	自定义左侧图标
+      right-icon	自定义右侧图标
+      `,
+      vals: null,
+    },
   },
 };

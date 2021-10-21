@@ -7,7 +7,7 @@ exports.data = {
   },
   wxml: {
     kind: "Snippet",
-    body: ['<van-search value="{{ ${1:value} }}"${2} />'],
+    body: ['<van-search value="{{ ${1:value} }}"${2}>${3}</van-search>'],
     detail: "Search 搜索",
     documentation: `用于搜索场景的输入框组件。`,
     attrs: [
@@ -323,5 +323,17 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["action", "label", "left-icon", "right-icon"],
+      detail: "Search 搜索 Slot",
+      documentation: `
+      action	自定义搜索框右侧按钮，需要在use-action-slot为 true 时才会显示
+      label	自定义搜索框左侧文本
+      left-icon	自定义输入框左侧图标，需要在use-left-icon-slot为 true 时才会显示
+      right-icon	自定义输入框右侧图标，需要在use-right-icon-slot为 true 时才会显示
+      `,
+      vals: null,
+    },
   },
 };

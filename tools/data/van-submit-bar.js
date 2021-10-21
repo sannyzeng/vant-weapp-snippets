@@ -161,5 +161,16 @@ exports.data = {
         vals: null,
       },
     ],
+    slot: {
+      kind: "Value",
+      body: ["top", "tip"],
+      detail: "SubmitBar 提交订单栏 Slot",
+      documentation: `
+      -	自定义订单栏左侧内容
+      top	自定义订单栏上方内容
+      tip	提示文案中的额外操作和说明
+      `,
+      vals: null,
+    },
   },
 };
