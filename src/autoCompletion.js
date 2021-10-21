@@ -1,8 +1,6 @@
 const vscode = require("vscode");
 const doc = require("../tools/data").data;
 
-console.log(doc);
-
 /**
  * 自动提示实现，这里模拟一个很简单的操作
  * 当输入 this.dependencies.xxx时自动把package.json中的依赖带出来
@@ -49,6 +47,46 @@ function provideCompletionItems(document, position, token, context) {
       );
       return completionItem;
     });
+  }
+
+  // slot
+  if (attrName == "slot") {
+    // 查找最近的 van 組件
+    tagNameMatch = text
+      .replace(/\n/g, "")
+      .replace(/\s+/g, " ")
+      .match(/van-[\w](.*?)[>|\s].*?/g);
+
+    tagName = tagNameMatch.length
+      ? tagNameMatch[tagNameMatch.length - 1].replace(/[>|\s]/g, "")
+      : "";
+
+    // 如果當前tagName使用slot屬性，向上查找父級tagName
+    if (
+      tagName != "" &&
+      line._text.indexOf("slot") != -1 &&
+      line._text.indexOf(tagName) != -1
+    ) {
+      tagName = tagNameMatch[tagNameMatch.length - 2].replace(/[>|\s]/g, "");
+    }
+    console.log(text.replace(/\n/g, "").replace(/\s+/g, " "), tagNameMatch);
+    let slot = doc.list[tagName].wxml.slot;
+    if (slot) {
+      return slot.body.map((bodyItem) => {
+        let completionItem = new vscode.CompletionItem(
+          bodyItem,
+          vscode.CompletionItemKind[slot.kind]
+        );
+        completionItem.detail = slot.detail;
+        completionItem.documentation = slot.documentation;
+        // 代码替换位置，查找位置会同步应用
+        completionItem.range = new vscode.Range(
+          new vscode.Position(position.line, position.character),
+          new vscode.Position(position.line, position.character)
+        );
+        return completionItem;
+      });
+    }
   }
 
   if (line._text.indexOf("<van") != -1) {
