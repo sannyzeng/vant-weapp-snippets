@@ -66,7 +66,7 @@ const van_common_style = require("./data/van-common-style").data;
 const van_class = require("./data/van-class").data;
 
 exports.data = {
-  version: "v1.9.1",
+  version: "v1.9.2",
   list: {
     "van-button": van_button,
     "van-cell-group": van_cell_group,
