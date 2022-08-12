@@ -324,6 +324,14 @@ exports.data = {
         vals: null,
       },
       {
+        kind: "Event",
+        body: ["bind:chooseavatar="],
+        detail: "bind:chooseavatar",
+        documentation:
+          "当 open-type 的值为 chooseAvatar 时，选择头像之后的回调",
+        vals: null,
+      },
+      {
         kind: "Field",
         body: ["custom-class="],
         detail: "custom-class",

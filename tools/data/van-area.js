@@ -92,6 +92,18 @@ exports.data = {
         vals: null,
       },
       {
+        kind: "Field",
+        body: ["show-toolbar="],
+        detail: "show-toolbar",
+        documentation: "是否显示顶部栏",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
         kind: "Event",
         body: ["bind:confirm="],
         detail: "bind:confirm",

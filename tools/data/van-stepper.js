@@ -258,6 +258,19 @@ exports.data = {
         documentation: "减号按钮样式类",
         vals: null,
       },
+      {
+        kind: "Field",
+        body: ["always-embed="],
+        detail: "always-embed",
+        documentation:
+          "强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效)",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
     ],
     slot: {
       kind: "Value",

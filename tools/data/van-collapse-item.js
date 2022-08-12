@@ -29,6 +29,18 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["size="],
+        detail: "size",
+        documentation: "标题栏大小，可选值为large",
+        vals: {
+          kind: "Value",
+          body: ["large"],
+          detail: "",
+          documentation: ``,
+        },
+      },
+      {
+        kind: "Field",
         body: ["icon="],
         detail: "icon",
         documentation: "标题栏左侧图标名称或图片链接，可选值见 Icon 组件",

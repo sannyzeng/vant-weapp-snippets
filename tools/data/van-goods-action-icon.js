@@ -164,6 +164,13 @@ exports.data = {
         },
       },
       {
+        kind: "Field",
+        body: ["class-prefix="],
+        detail: "class-prefix",
+        documentation: "类名前缀",
+        vals: null,
+      },
+      {
         kind: "Event",
         body: ["bind:click="],
         detail: "bind:click",

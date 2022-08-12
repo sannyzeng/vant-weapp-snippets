@@ -55,7 +55,7 @@ exports.data = {
         kind: "Field",
         body: ["delay="],
         detail: "delay",
-        documentation: "动画延迟时间 (s)",
+        documentation: "动画延迟时间 (ms)",
         vals: null,
       },
       {
