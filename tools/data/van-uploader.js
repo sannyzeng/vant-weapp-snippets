@@ -237,6 +237,14 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["extension ="],
+        detail: "extension ",
+        documentation:
+          "当 accept 为 file 时生效，根据文件拓展名过滤可选择文件。每一项都不能是空字符串。默认不过滤",
+        vals: null,
+      },
+      {
+        kind: "Field",
         body: ["upload-icon="],
         detail: "upload-icon",
         documentation: "上传区域图标，可选值见 Icon 组件",

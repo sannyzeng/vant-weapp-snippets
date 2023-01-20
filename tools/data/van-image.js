@@ -91,6 +91,18 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["webp="],
+        detail: "webp",
+        documentation: "是否解析 webp 格式",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["show-error="],
         detail: "show-error",
         documentation: "是否展示图片加载失败提示",
