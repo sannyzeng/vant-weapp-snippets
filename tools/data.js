@@ -64,6 +64,7 @@ const van_goods_action_icon = require("./data/van-goods-action-icon").data;
 const van_goods_action_button = require("./data/van-goods-action-button").data;
 const van_common_style = require("./data/van-common-style").data;
 const van_class = require("./data/van-class").data;
+const van_cascader = require("./data/van-cascader").data;
 
 exports.data = {
   version: "v1.10.4",
@@ -132,6 +133,8 @@ exports.data = {
     "van-goods-action": van_goods_action,
     "van-goods-action-icon": van_goods_action_icon,
     "van-goods-action-button": van_goods_action_button,
+    // 级联组件
+    "van-cascader": van_cascader,
     // 內置樣式
     "van-common-style": van_common_style,
     class: van_class,
