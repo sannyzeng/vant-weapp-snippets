@@ -41,5 +41,23 @@ exports.data = {
       documentation:
         "Notify({message: '自定义颜色',color: '#ad0000',background:'#ffe1e1',duration: 1000,selector: '#custom-selector'});",
     },
+    {
+      kind: "Function",
+      body: ["Notify.clear();"],
+      detail: "Notify.clear",
+      documentation: "Notify.clear();",
+    },
+    {
+      kind: "Function",
+      body: ["Notify.setDefaultOptions(${1:options});"],
+      detail: "Notify.setDefaultOptions",
+      documentation: "Notify.setDefaultOptions(options);",
+    },
+    {
+      kind: "Function",
+      body: ["Notify.resetDefaultOptions();"],
+      detail: "Notify.resetDefaultOptions",
+      documentation: "Notify.resetDefaultOptions();",
+    },
   ],
 };
