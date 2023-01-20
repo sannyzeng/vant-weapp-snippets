@@ -132,7 +132,7 @@ exports.data = {
       value	自定义显示内容
       icon	自定义icon
       title	自定义title
-      right-icon	自定义右侧按钮，默认是arrow
+      right-icon	自定义右侧按钮，默认是arrow, 需要将 is-link 设置为 false, 才会生效
       `,
       vals: null,
     },

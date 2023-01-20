@@ -121,6 +121,20 @@ exports.data = {
         },
       },
       {
+        kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["list-class="],
+        detail: "list-class",
+        documentation: "actions容器样式类",
+        vals: null,
+      },
+      {
         kind: "Event",
         body: ["bind:select="],
         detail: "bind:select",

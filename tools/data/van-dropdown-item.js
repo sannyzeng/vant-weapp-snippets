@@ -50,7 +50,7 @@ exports.data = {
         kind: "Field",
         body: ["title-class="],
         detail: "title-class",
-        documentation: "标题额外类名",
+        documentation: "标题额外类名，建议使用自定义样式 item-title-class 代替",
         vals: null,
       },
       {
@@ -58,6 +58,20 @@ exports.data = {
         body: ["popup-style="],
         detail: "popup-style",
         documentation: "自定义弹出层样式",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["item-title-class="],
+        detail: "item-title-class",
+        documentation: "选项样式类",
         vals: null,
       },
       {

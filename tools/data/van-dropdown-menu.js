@@ -87,6 +87,13 @@ exports.data = {
         documentation: "根节点样式类",
         vals: null,
       },
+      {
+        kind: "Field",
+        body: ["title-class="],
+        detail: "title-class",
+        documentation: "选中项样式类",
+        vals: null,
+      },
     ],
   },
 };
