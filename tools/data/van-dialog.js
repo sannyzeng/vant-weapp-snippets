@@ -19,6 +19,15 @@ exports.data = {
       `,
       vals: null,
     },
+    attrs: [
+      {
+        kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+    ],
   },
   js: {
     kind: "Snippet",

@@ -224,6 +224,19 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["media-type="],
+        detail: "media-type",
+        documentation:
+          "当 accept 为 media 时生效，选择的文件的文件类型，可选值为 image video",
+        vals: {
+          kind: "Value",
+          body: ["['image', 'video']", "['image']", "['video']"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["upload-icon="],
         detail: "upload-icon",
         documentation: "上传区域图标，可选值见 Icon 组件",
