@@ -167,10 +167,30 @@ exports.data = {
         vals: null,
       },
       {
+        kind: "Field",
+        body: ["use-before-change="],
+        detail: "use-before-change",
+        documentation: "是否开启切换前校验",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
         kind: "Event",
         body: ["bind:click="],
         detail: "bind:click",
         documentation: "点击标签时触发",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:before-change="],
+        detail: "bind:before-change",
+        documentation:
+          "tab 切换前会触发，在回调函数中返回 false 可终止 tab 切换，绑定事件的同时需要将use-before-change属性设置为true",
         vals: null,
       },
       {
