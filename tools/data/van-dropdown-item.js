@@ -62,6 +62,18 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["use-before-toggle="],
+        detail: "use-before-toggle",
+        documentation: "是否开启下拉菜单打开或者关闭前校验",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["custom-class="],
         detail: "custom-class",
         documentation: "根节点样式类",
@@ -107,6 +119,14 @@ exports.data = {
         body: ["bind:closed="],
         detail: "bind:closed",
         documentation: "关闭菜单栏且动画结束后触发",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:before-toggle="],
+        detail: "bind:before-toggle",
+        documentation:
+          "下拉菜单打开或者关闭前触发，需要将use-before-toggle属性设置为true",
         vals: null,
       },
     ],

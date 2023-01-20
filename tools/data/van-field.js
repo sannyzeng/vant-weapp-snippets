@@ -464,6 +464,18 @@ exports.data = {
         },
       },
       {
+        kind: "Field",
+        body: ["extra-event-params="],
+        detail: "extra-event-params",
+        documentation: `开启事件增强模式，会在 input 和 change 事件额外提供 cursor 和 keyCode 参数，计划在下一个大版本作为默认行为`,
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
         kind: "Event",
         body: ["bind:input="],
         detail: "bind:input",
