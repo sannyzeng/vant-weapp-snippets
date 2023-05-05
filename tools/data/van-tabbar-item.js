@@ -56,6 +56,25 @@ exports.data = {
         documentation: "图标右上角提示信息",
         vals: null,
       },
+      {
+        kind: "Field",
+        body: ["url="],
+        detail: "url",
+        documentation: "点击后跳转的链接地址, 需要以 / 开头",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["link-type="],
+        detail: "link-type",
+        documentation: "链接跳转类型，可选值为 redirectTo、switchTab、reLaunch",
+        vals: {
+          kind: "Value",
+          body: ["redirectTo", "switchTab", "reLaunch"],
+          detail: "",
+          documentation: "",
+        },
+      },
     ],
     slot: {
       kind: "Value",

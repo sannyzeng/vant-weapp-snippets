@@ -261,6 +261,19 @@ exports.data = {
         },
       },
       {
+        kind: "Field",
+        body: ["min-range="],
+        detail: "min-range",
+        documentation:
+          "当 Calendar 的 type 为 multiple 时支持此属性，日期最少可选天数",
+        vals: {
+          kind: "Value",
+          body: ["1", "2", "3", "4", "5", "6", "7", "10", "15"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
         kind: "Event",
         body: ["bind:select="],
         detail: "bind:select",

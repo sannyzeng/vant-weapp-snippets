@@ -237,11 +237,23 @@ exports.data = {
       },
       {
         kind: "Field",
-        body: ["extension ="],
-        detail: "extension ",
+        body: ["extension="],
+        detail: "extension",
         documentation:
           "当 accept 为 file 时生效，根据文件拓展名过滤可选择文件。每一项都不能是空字符串。默认不过滤",
         vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["showmenu="],
+        detail: "showmenu",
+        documentation: "预览图片时，是否显示长按菜单",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
       },
       {
         kind: "Field",

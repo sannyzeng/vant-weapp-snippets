@@ -149,6 +149,19 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["safe-area-tab-bar="],
+        detail: "safe-area-tab-bar",
+        documentation:
+          "是否留出底部 tabbar 安全距离（在使用 tabbar 组件 & 小程序自定义 tabbar 时，popup 组件层级无法盖住 tabbar）",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["lock-scroll="],
         detail: "lock-scroll",
         documentation: "是否锁定背景滚动",
