@@ -70,6 +70,18 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["safe-area-tab-bar="],
+        detail: "safe-area-tab-bar",
+        documentation: "是否留出底部 tabbar 安全距离",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["close-on-click-outside="],
         detail: "close-on-click-outside",
         documentation: "是否在点击外部 menu 后关闭菜单",

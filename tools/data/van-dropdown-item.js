@@ -74,6 +74,19 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["root-portal="],
+        detail: "root-portal",
+        documentation:
+          "是否从页面子树中脱离出来，用于解决各种 fixed 失效问题，微信基础库 >= 2.25.2",
+        vals: {
+          kind: "Value",
+          body: ["true", "false"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["custom-class="],
         detail: "custom-class",
         documentation: "根节点样式类",
