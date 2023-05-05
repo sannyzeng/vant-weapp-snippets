@@ -85,10 +85,10 @@
   resolved "https://registry.npmmirror.com/@types/node/download/@types/node-14.17.27.tgz?cache=0&sync_timestamp=1634443508532&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.17.27.tgz#5054610d37bb5f6e21342d0e6d24c494231f3b85"
   integrity sha1-UFRhDTe7X24hNC0ObSTElCMfO4U=
 
-"@types/vscode@^1.61.0":
-  version "1.61.0"
-  resolved "https://registry.npmmirror.com/@types/vscode/download/@types/vscode-1.61.0.tgz?cache=0&sync_timestamp=1633651844303&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fvscode%2Fdownload%2F%40types%2Fvscode-1.61.0.tgz#c54335b6f84c19c69b1435b17cc0ce3b2cecfeec"
-  integrity sha1-xUM1tvhMGcabFDWxfMDOOyzs/uw=
+"@types/vscode@^1.52.0":
+  version "1.78.0"
+  resolved "https://registry.npmmirror.com/@types/vscode/-/vscode-1.78.0.tgz#b5600abce8855cf21fb32d0857bcd084b1f83069"
+  integrity sha512-LJZIJpPvKJ0HVQDqfOy6W4sNKUBBwyDu1Bs8chHBZOe9MNuKTJtidgZ2bqjhmmWpUb0TIIqv47BFUcVmAsgaVA==
 
 "@ungap/promise-all-settled@1.1.2":
   version "1.1.2"

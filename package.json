@@ -2,9 +2,9 @@
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
   "description": "Vant Weapp Snippets for VS Code",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "engines": {
-    "vscode": "^1.61.0"
+    "vscode": "^1.52.0"
   },
   "publisher": "Kenzeng",
   "author": {
@@ -94,7 +94,7 @@
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.61.0",
+    "@types/vscode": "^1.52.0",
     "@types/glob": "^7.1.4",
     "@types/mocha": "^9.0.0",
     "@types/node": "14.x",
