@@ -34,6 +34,13 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["color="],
+        detail: "color",
+        documentation: "图标颜色",
+        vals: null,
+      },
+      {
+        kind: "Field",
         body: ["url="],
         detail: "url",
         documentation: "点击后跳转的链接地址",
