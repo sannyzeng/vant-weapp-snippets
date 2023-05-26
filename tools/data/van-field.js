@@ -442,8 +442,7 @@ exports.data = {
         kind: "Field",
         body: ["clear-trigger="],
         detail: "clear-trigger",
-        documentation: `显示清除图标的时机，always 表示输入框不为空时展示，
-      focus 表示输入框聚焦且不为空时展示`,
+        documentation: `显示清除图标的时机，always 表示输入框不为空时展示，focus 表示输入框聚焦且不为空时展示`,
         vals: {
           kind: "Value",
           body: ["focus"],
