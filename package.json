@@ -2,7 +2,7 @@
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
   "description": "Vant Weapp Snippets for VS Code",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "engines": {
     "vscode": "^1.52.0"
   },
@@ -58,7 +58,11 @@
       {
         "language": "wxml",
         "scopeName": "text.html.wxml",
-        "path": "./syntaxes/wxml.tmLanguage.json"
+        "path": "./syntaxes/wxml.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "js"
+        }
       }
     ],
     "snippets": [
