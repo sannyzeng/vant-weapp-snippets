@@ -2,7 +2,7 @@
   "name": "vant-weapp-snippets",
   "displayName": "Vant Weapp Snippets",
   "description": "Vant Weapp Snippets for VS Code",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "engines": {
     "vscode": "^1.52.0"
   },

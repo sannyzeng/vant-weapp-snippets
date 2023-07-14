@@ -57,7 +57,8 @@ exports.data = {
         kind: "Field",
         body: ["default-date="],
         detail: "default-date",
-        documentation: "默认选中的日期，type为multiple或range时为数组",
+        documentation:
+          "默认选中的日期，type为multiple或range时为数组，传入 null 表示默认不选择",
         vals: null,
       },
       {

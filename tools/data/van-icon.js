@@ -95,6 +95,13 @@ exports.data = {
         documentation: "根节点样式类",
         vals: null,
       },
+      {
+        kind: "Field",
+        body: ["info-class="],
+        detail: "info-class",
+        documentation: "图标右上角文字样式类",
+        vals: null,
+      },
     ],
   },
 };

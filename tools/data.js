@@ -67,7 +67,7 @@ const van_class = require("./data/van-class").data;
 const van_cascader = require("./data/van-cascader").data;
 
 exports.data = {
-  version: "vv1.10.19",
+  version: "v1.10.21",
   list: {
     "van-button": van_button,
     "van-cell-group": van_cell_group,

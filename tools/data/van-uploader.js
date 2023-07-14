@@ -153,6 +153,19 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["video-fit="],
+        detail: "video-fit",
+        documentation:
+          "video 封面的预览图模式，可选值参考小程序video组件的object-fit属性 contain（默认）",
+        vals: {
+          kind: "Value",
+          body: ["contain", "fill", "cover"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["image-fit="],
         detail: "image-fit",
         documentation: "预览图裁剪模式，可选值参考小程序image组件的mode属性",

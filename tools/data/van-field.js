@@ -546,6 +546,13 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["custom-class="],
+        detail: "custom-class",
+        documentation: "根节点样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
         body: ["label-class="],
         detail: "label-class",
         documentation: "左侧文本样式类",

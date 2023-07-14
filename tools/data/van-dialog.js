@@ -27,6 +27,20 @@ exports.data = {
         documentation: "根节点样式类",
         vals: null,
       },
+      {
+        kind: "Field",
+        body: ["cancle-button-class="],
+        detail: "cancle-button-class",
+        documentation: "取消按钮样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["confirm-button-class="],
+        detail: "confirm-button-class",
+        documentation: "确认按钮样式类",
+        vals: null,
+      },
     ],
   },
   js: {

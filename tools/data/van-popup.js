@@ -125,6 +125,19 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["close-icon-position="],
+        detail: "close-icon-position",
+        documentation:
+          "关闭图标位置，可选值为top-right(默认) top-left bottom-left bottom-right",
+        vals: {
+          kind: "Value",
+          body: ["top-right", "top-left", "bottom-left", "bottom-right"],
+          detail: "",
+          documentation: "",
+        },
+      },
+      {
+        kind: "Field",
         body: ["safe-area-inset-bottom="],
         detail: "safe-area-inset-bottom",
         documentation: "是否为 iPhoneX 留出底部安全距离",

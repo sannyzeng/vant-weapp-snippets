@@ -191,10 +191,13 @@ exports.data = {
             "contact",
             "share",
             "getPhoneNumber",
+            "getRealtimePhoneNumber",
             "getUserInfo",
             "launchApp",
             "openSetting",
             "feedback",
+            "chooseAvatar",
+            "agreePrivacyAuthorization",
           ],
           detail: "",
           documentation: ``,
@@ -307,6 +310,14 @@ exports.data = {
         body: ["bind:getphonenumber="],
         detail: "bind:getphonenumber",
         documentation: "获取用户手机号回调",
+        vals: null,
+      },
+      {
+        kind: "Event",
+        body: ["bind:getrealtimephonenumber="],
+        detail: "bind:getrealtimephonenumber",
+        documentation:
+          "获取手机号实时验证回调，open-type=getRealtimePhoneNumber 时有效",
         vals: null,
       },
       {

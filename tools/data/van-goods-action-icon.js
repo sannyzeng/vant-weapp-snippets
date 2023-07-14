@@ -41,6 +41,13 @@ exports.data = {
       },
       {
         kind: "Field",
+        body: ["size="],
+        detail: "size",
+        documentation: "图标大小，如 20px，2em，默认单位为px",
+        vals: null,
+      },
+      {
+        kind: "Field",
         body: ["url="],
         detail: "url",
         documentation: "点击后跳转的链接地址",
@@ -196,6 +203,13 @@ exports.data = {
         body: ["text-class="],
         detail: "text-class",
         documentation: "文字样式类",
+        vals: null,
+      },
+      {
+        kind: "Field",
+        body: ["info-class="],
+        detail: "info-class",
+        documentation: "图标右上角文字样式类",
         vals: null,
       },
     ],
