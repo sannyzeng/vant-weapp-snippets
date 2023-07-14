@@ -97,7 +97,7 @@
     "pretest": "yarn run lint",
     "test": "node ./test/runTest.js",
     "gen": "node ./tools/gen",
-    "build": "vsce package",
+    "build": "npm run gen & vsce package",
     "publish": "vsce publish"
   },
   "devDependencies": {
