@@ -11,6 +11,20 @@ exports.data = {
     detail: "Circle 环形进度条",
     documentation: `圆环形的进度条组件，支持进度渐变动画。`,
     attrs: [
+      /**
+       * Props
+        参数	说明	类型	默认值
+        value	目标进度	number	0
+        type	指定 canvas 类型，可选值为 2d	string	-
+        size	圆环直径，默认单位为 px	number	100
+        color	进度条颜色，传入对象格式可以定义渐变色	string | object	#1989fa
+        layer-color	轨道颜色	string	#fff
+        fill	填充颜色	string	-
+        speed	动画速度（单位为 value/s）	number	50
+        text	文字	string	-
+        stroke-width	进度条宽度	number	4
+        clockwise	是否顺时针增加	boolean	true
+       */
       {
         kind: "Field",
         body: ["value="],
@@ -23,12 +37,7 @@ exports.data = {
         body: ["type="],
         detail: "type",
         documentation: "指定 canvas 类型，可选值为 2d",
-        vals: {
-          kind: "Value",
-          body: ["2d"],
-          detail: "",
-          documentation: "",
-        },
+        vals: null,
       },
       {
         kind: "Field",

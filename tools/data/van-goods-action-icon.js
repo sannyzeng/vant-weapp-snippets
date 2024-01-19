@@ -11,6 +11,30 @@ exports.data = {
     detail: "GoodsAction 商品导航 GoodsActionIcon",
     documentation: `GoodsActionIcon`,
     attrs: [
+      /**
+       * GoodsActionIcon Props
+        参数	说明	类型	默认值
+        text	按钮文字	string	-
+        icon	图标类型，可选值见icon组件	string	-
+        info	图标右上角提示信息	string | number	-
+        color v1.10.15	图标颜色	string	inherit
+        size	图标大小，如 20px，2em，默认单位为px	string | number	-
+        url	点击后跳转的链接地址	string	-
+        link-type	链接跳转类型，可选值为 redirectTo switchTab reLaunch	string	navigateTo
+        id	标识符	string	-
+        disabled	是否禁用按钮	boolean	false
+        loading	是否显示为加载状态	boolean	false
+        open-type	微信开放能力，具体支持可参考 微信官方文档	string	-
+        app-parameter	打开 APP 时，向 APP 传递的参数	string	-
+        lang	指定返回用户信息的语言，zh_CN 简体中文，
+        zh_TW 繁体中文，en 英文	string	en
+        session-from	会话来源	string	-
+        send-message-title	会话内消息卡片标题	string	当前标题
+        send-message-path	会话内消息卡片点击跳转小程序路径	string	当前分享路径
+        send-message-img	sendMessageImg	string	截图
+        show-message-card	显示会话内消息卡片	string	false
+        class-prefix v1.10.1	类名前缀	string	van-icon
+       */
       {
         kind: "Field",
         body: ["text="],
@@ -57,11 +81,10 @@ exports.data = {
         kind: "Field",
         body: ["link-type="],
         detail: "link-type",
-        documentation:
-          "链接跳转类型，可选值为navigateTo redirectTo switchTab reLaunch",
+        documentation: "链接跳转类型，可选值为 redirectTo、switchTab、reLaunch",
         vals: {
           kind: "Value",
-          body: ["navigateTo", "redirectTo", "switchTab", "reLaunch"],
+          body: ["redirectTo", "switchTab", "reLaunch"],
           detail: "",
           documentation: "",
         },
@@ -102,20 +125,7 @@ exports.data = {
         body: ["open-type="],
         detail: "open-type",
         documentation: "微信开放能力，具体支持可参考 微信官方文档",
-        vals: {
-          kind: "Value",
-          body: [
-            "contact",
-            "share",
-            "getPhoneNumber",
-            "getUserInfo",
-            "launchApp",
-            "openSetting",
-            "feedback",
-          ],
-          detail: "",
-          documentation: ``,
-        },
+        vals: null,
       },
       {
         kind: "Field",
@@ -130,12 +140,7 @@ exports.data = {
         detail: "lang",
         documentation:
           "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文",
-        vals: {
-          kind: "Value",
-          body: ["en", "zh_CN", "zh_TW"],
-          detail: "",
-          documentation: "",
-        },
+        vals: null,
       },
       {
         kind: "Field",
@@ -155,7 +160,7 @@ exports.data = {
         kind: "Field",
         body: ["send-message-path="],
         detail: "send-message-path",
-        documentation: "会话内消息卡片点击跳转小程序路径	",
+        documentation: "会话内消息卡片点击跳转小程序路径",
         vals: null,
       },
       {
@@ -184,13 +189,13 @@ exports.data = {
         documentation: "类名前缀",
         vals: null,
       },
-      {
-        kind: "Event",
-        body: ["bind:click="],
-        detail: "bind:click",
-        documentation: "按钮点击事件回调",
-        vals: null,
-      },
+      /**
+       * GoodsActionIcon 外部样式类
+        类名	说明
+        icon-class	图标样式类
+        text-class	文字样式类
+        info-class v1.10.20	图标右上角文字样式类
+       */
       {
         kind: "Field",
         body: ["icon-class="],
@@ -213,6 +218,11 @@ exports.data = {
         vals: null,
       },
     ],
+    /**
+     * GoodsActionIcon Slot
+      名称	说明
+      icon	自定义图标
+     */
     slot: {
       kind: "Value",
       body: ["icon"],

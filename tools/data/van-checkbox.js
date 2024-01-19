@@ -13,11 +13,24 @@ exports.data = {
     detail: "Checkbox 复选框",
     documentation: `在一组备选项中进行多选。`,
     attrs: [
+      /**
+       * Checkbox Props
+        参数	说明	类型	默认值
+        name	标识 Checkbox 名称	string	-
+        shape	形状，可选值为 round square	string	round
+        value	是否为选中状态	boolean	false
+        disabled	是否禁用单选框	boolean	false
+        label-disabled	是否禁用单选框内容点击	boolean	false
+        label-position	文本位置，可选值为 left	string	right
+        use-icon-slot	是否使用 icon slot	boolean	false
+        checked-color	选中状态颜色	string	#1989fa
+        icon-size	icon 大小	string | number	20px
+       */
       {
         kind: "Field",
         body: ["name="],
         detail: "name",
-        documentation: "标识 Checkbox 名称",
+        documentation: "在表单内提交时的标识符",
         vals: null,
       },
       {
@@ -72,10 +85,10 @@ exports.data = {
         kind: "Field",
         body: ["label-position="],
         detail: "label-position",
-        documentation: "文本位置，可选值为 left right",
+        documentation: "文本位置，可选值为 left",
         vals: {
           kind: "Value",
-          body: ["right", "left"],
+          body: ["left", "right"],
           detail: "",
           documentation: "",
         },
@@ -106,6 +119,12 @@ exports.data = {
         documentation: "icon 大小",
         vals: null,
       },
+
+      /**
+       * Checkbox Event
+        事件名	说明	回调参数
+        bind:change	当绑定值变化时触发的事件	当前组件的值
+       */
       {
         kind: "Event",
         body: ["bind:change="],
@@ -113,6 +132,14 @@ exports.data = {
         documentation: "当绑定值变化时触发的事件",
         vals: null,
       },
+
+      /**
+       * Checkbox 外部样式类
+        类名	说明
+        custom-class	根节点样式类
+        icon-class	图标样式类
+        label-class	描述信息样式类
+       */
       {
         kind: "Field",
         body: ["custom-class="],
@@ -135,6 +162,12 @@ exports.data = {
         vals: null,
       },
     ],
+    /**
+     * Checkbox Slot
+      名称	说明
+      -	自定义文本
+      icon	自定义图标
+     */
     slot: {
       kind: "Value",
       body: ["icon"],

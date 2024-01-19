@@ -11,6 +11,14 @@ exports.data = {
     detail: "Collapse 折叠面板",
     documentation: `将一组内容放置在多个折叠面板中，点击面板的标题可以展开或收缩其内容。`,
     attrs: [
+      /**
+       * Collapse Props
+        参数	说明	类型	默认值
+        value	当前展开面板的 name	非手风琴模式：(string | number)[]
+        手风琴模式：string | number	-
+        accordion	是否开启手风琴模式	boolean	false
+        border	是否显示外边框	boolean	true
+       */
       {
         kind: "Field",
         body: ["value="],
@@ -42,27 +50,41 @@ exports.data = {
           documentation: "",
         },
       },
+
+      /**
+       * Collapse Event
+        事件名	说明	参数
+        change	切换面板时触发	activeNames: string | Array
+        open	展开面板时触发	currentName: string | number
+        close	关闭面板时触发	currentName: string | number
+       */
       {
         kind: "Event",
-        body: ["bind:change="],
-        detail: "bind:change",
-        documentation: "切换面板时触发",
+        body: ["bind:change"],
+        detail: "切换面板时触发",
+        documentation: "activeNames: string | Array",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:open="],
-        detail: "bind:open",
-        documentation: "展开面板时触发",
+        body: ["bind:open"],
+        detail: "展开面板时触发",
+        documentation: "currentName: string | number",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:close="],
-        detail: "bind:close",
-        documentation: "关闭面板时触发",
+        body: ["bind:close"],
+        detail: "关闭面板时触发",
+        documentation: "currentName: string | number",
         vals: null,
       },
+
+      /**
+       * Collapse 外部样式类
+        类名	说明
+        custom-class	根节点样式类
+       */
       {
         kind: "Field",
         body: ["custom-class="],

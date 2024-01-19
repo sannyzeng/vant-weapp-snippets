@@ -11,6 +11,11 @@ exports.data = {
     detail: "GoodsAction 商品导航",
     documentation: `用于为商品相关操作提供便捷交互。`,
     attrs: [
+      /**
+       * GoodsAction Props
+        参数	说明	类型	默认值
+        safe-area-inset-bottom	是否为 iPhoneX 留出底部安全距离	boolean	true
+       */
       {
         kind: "Field",
         body: ["safe-area-inset-bottom="],

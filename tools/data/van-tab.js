@@ -11,6 +11,16 @@ exports.data = {
     detail: "Tab 标签页 Tab",
     documentation: `选项卡组件，用于在不同的内容区域之间进行切换。`,
     attrs: [
+      /**
+       * Tab Props
+        参数	说明	类型	默认值
+        name	标签名称，作为匹配的标识符	string | number	标签的索引值
+        title	标题	string	-
+        disabled	是否禁用标签	boolean	false
+        dot	是否显示小红点	boolean	-
+        info	图标右上角提示信息	string | number	-
+        title-style	自定义标题样式	string	-
+       */
       {
         kind: "Field",
         body: ["name="],

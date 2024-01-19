@@ -19,6 +19,15 @@ exports.data = {
     detail: "SwipeCell 滑动单元格",
     documentation: `可以左右滑动来展示操作按钮的单元格组件。`,
     attrs: [
+      /**
+       * Props
+        参数	说明	类型	默认值
+        name	标识符，可以在 close 事件的参数中获取到	string | number	-
+        left-width	左侧滑动区域宽度	number	0
+        right-width	右侧滑动区域宽度	number	0
+        async-close	是否异步关闭	boolean	false
+        disabled v1.3.4	是否禁用滑动	boolean	false
+       */
       {
         kind: "Field",
         body: ["name="],
@@ -64,30 +73,44 @@ exports.data = {
           documentation: "",
         },
       },
+
+      /**
+       * Events
+        事件名	说明	参数
+        bind:click	点击时触发	关闭时的点击位置 (left right cell outside)
+        bind:close	关闭时触发	{ position: 'left' | 'right' , instance , name: string }
+        bind:open	打开时触发	{ position: 'left' | 'right' , name: string }
+       */
       {
         kind: "Event",
-        body: ["bind:click="],
-        detail: "bind:click",
-        documentation: "点击时触发 关闭时的点击位置 (left right cell outside)",
+        body: ["bind:click"],
+        detail: "点击时触发",
+        documentation: "关闭时的点击位置 (left right cell outside)",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:close="],
-        detail: "bind:close",
+        body: ["bind:close"],
+        detail: "关闭时触发",
         documentation:
-          "关闭时触发 { position: ‘left’ | ‘right’ , instance , name: string }",
+          "{ position: 'left' | 'right' , instance , name: string }",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:open="],
-        detail: "bind:open",
-        documentation:
-          "打开时触发 { position: ‘left’ | ‘right’ , name: string }",
+        body: ["bind:open"],
+        detail: "打开时触发",
+        documentation: "{ position: 'left' | 'right' , name: string }",
         vals: null,
       },
     ],
+    /**
+     * Slot
+      名称	说明
+      -	自定义显示内容
+      left	左侧滑动内容
+      right	右侧滑动内容
+     */
     slot: {
       kind: "Value",
       body: ["left", "right"],

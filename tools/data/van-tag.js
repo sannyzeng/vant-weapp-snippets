@@ -11,6 +11,18 @@ exports.data = {
     detail: "Tag 标签",
     documentation: `用于标记关键词和概括主要内容。`,
     attrs: [
+      /**
+       * Props
+        参数	说明	类型	默认值
+        type	类型，可选值为 primary success danger warning	string	-
+        size	大小, 可选值为 large medium	string	-
+        color	标签颜色	string	-
+        plain	是否为空心样式	boolean	false
+        round	是否为圆角样式	boolean	false
+        mark	是否为标记样式	boolean	false
+        text-color	文本颜色，优先级高于 color 属性	string	white
+        closeable	是否为可关闭标签	boolean	false
+       */
       {
         kind: "Field",
         body: ["type="],
@@ -97,13 +109,25 @@ exports.data = {
           documentation: "",
         },
       },
+
+      /**
+       * Events
+        事件名	说明	回调参数
+        bind:close	关闭标签时触发	-
+       */
       {
         kind: "Event",
-        body: ["bind:close="],
-        detail: "bind:close",
-        documentation: "关闭标签时触发",
+        body: ["bind:close"],
+        detail: "关闭标签时触发",
+        documentation: "-",
         vals: null,
       },
+
+      /**
+       * 外部样式类
+        类名	说明
+        custom-class	根节点样式类
+       */
       {
         kind: "Field",
         body: ["custom-class="],

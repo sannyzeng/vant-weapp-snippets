@@ -11,6 +11,13 @@ exports.data = {
     detail: "Cell 分组",
     documentation: `Cell 分组。`,
     attrs: [
+      /**
+       * CellGroup Props
+        参数	说明	类型	默认值
+        title	分组标题	string	-
+        inset v1.7.2	是否展示为圆角卡片风格	boolean	false
+        border	是否显示外边框	boolean	true
+       */
       {
         kind: "Field",
         body: ["title="],
@@ -20,7 +27,7 @@ exports.data = {
       },
       {
         kind: "Field",
-        body: ["inset ="],
+        body: ["inset="],
         detail: "inset",
         documentation: "是否展示为圆角卡片风格",
         vals: {
@@ -42,6 +49,11 @@ exports.data = {
           documentation: "",
         },
       },
+      /**
+       * CellGroup 外部样式类
+        类名	说明
+        custom-class	根节点样式类
+       */
       {
         kind: "Field",
         body: ["custom-class="],

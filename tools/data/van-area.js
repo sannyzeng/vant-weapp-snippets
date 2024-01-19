@@ -11,6 +11,21 @@ exports.data = {
     detail: "Area 省市区选择",
     documentation: `省市区选择组件通常与 弹出层 组件配合使用。`,
     attrs: [
+      /**
+       * Props
+        参数	说明	类型	默认值
+        value	当前选中的省市区code	string	-
+        title	顶部栏标题	string	-
+        area-list	省市区数据，格式见下方	object	-
+        columns-num	省市区显示列数，3-省市区，2-省市，1-省	number	3
+        columns-placeholder	列占位提示文字	string[]	[]
+        loading	是否显示加载状态	boolean	false
+        item-height	选项高度	number	44
+        visible-item-count	可见的选项个数	number	6
+        confirm-button-text	确认按钮文字	string	确认
+        cancel-button-text	取消按钮文字	string	取消
+        show-toolbar 1.10.3	是否显示顶部栏	boolean	true
+       */
       {
         kind: "Field",
         body: ["value="],
@@ -37,19 +52,19 @@ exports.data = {
         body: ["columns-num="],
         detail: "columns-num",
         documentation: "省市区显示列数，3-省市区，2-省市，1-省",
-        vals: {
-          kind: "Value",
-          body: ["3", "2", "1"],
-          detail: "",
-          documentation: "",
-        },
+        vals: null,
       },
       {
         kind: "Field",
         body: ["columns-placeholder="],
         detail: "columns-placeholder",
         documentation: "列占位提示文字",
-        vals: null,
+        vals: {
+          kind: "Value",
+          body: ["[]"],
+          detail: "",
+          documentation: "",
+        },
       },
       {
         kind: "Field",
@@ -103,6 +118,13 @@ exports.data = {
           documentation: "",
         },
       },
+      /**
+       * Events
+        事件	说明	回调参数
+        bind:confirm	点击右上方完成按钮	一个数组参数，具体格式看下方数据格式章节
+        bind:cancel	点击取消按钮时	-
+        bind:change	选项改变时触发	Picker 实例，所有列选中值，当前列对应的索引
+       */
       {
         kind: "Event",
         body: ["bind:confirm="],

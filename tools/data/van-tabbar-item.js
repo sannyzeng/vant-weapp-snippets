@@ -11,6 +11,17 @@ exports.data = {
     detail: "Tabbar 标签栏Item",
     documentation: `底部导航栏，用于在不同页面之间进行切换。`,
     attrs: [
+      /**
+       * TabbarItem Props
+        参数	说明	类型	默认值
+        name	标签名称，作为匹配的标识符	string | number	当前标签的索引值
+        icon	图标名称或图片链接，可选值见 Icon 组件	string	-
+        icon-prefix	图标类名前缀，同 Icon 组件的 class-prefix 属性	string	van-icon
+        dot	是否显示小红点	boolean	-
+        info	图标右上角提示信息	string | number	-
+        url v1.10.13	点击后跳转的链接地址, 需要以 / 开头	string	-
+        link-type v1.10.13	链接跳转类型，可选值为 redirectTo、switchTab、reLaunch	string	redirectTo
+       */
       {
         kind: "Field",
         body: ["name="],
@@ -30,12 +41,7 @@ exports.data = {
         body: ["icon-prefix="],
         detail: "icon-prefix",
         documentation: "图标类名前缀，同 Icon 组件的 class-prefix 属性",
-        vals: {
-          kind: "Value",
-          body: ["van-icon"],
-          detail: "",
-          documentation: "",
-        },
+        vals: null,
       },
       {
         kind: "Field",
@@ -76,6 +82,12 @@ exports.data = {
         },
       },
     ],
+    /**
+     * TabbarItem Slot
+      名称	说明
+      icon	未选中时的图标
+      icon-active	选中时的图标
+     */
     slot: {
       kind: "Value",
       body: ["icon", "icon-active"],

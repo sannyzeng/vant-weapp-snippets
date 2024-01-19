@@ -13,6 +13,15 @@ exports.data = {
     detail: "Checkbox 复选框组",
     documentation: `需要与van-checkbox-group一起使用，选中值是一个数组，通过value绑定在van-checkbox-group上，数组中的项即为选中的Checkbox的name属性设置的值。`,
     attrs: [
+      /**
+       * CheckboxGroup Props
+        参数	说明	类型	默认值
+        name	在表单内提交时的标识符	string	-
+        value	所有选中项的 name	Array	-
+        disabled	是否禁用所有单选框	boolean	false
+        max	设置最大可选数	number	0（无限制）
+        direction v1.7.0	排列方向，可选值为 horizontal	string	vertical
+       */
       {
         kind: "Field",
         body: ["name="],
@@ -43,13 +52,13 @@ exports.data = {
         kind: "Field",
         body: ["max="],
         detail: "max",
-        documentation: "设置最大可选数 0（无限制）",
+        documentation: "设置最大可选数",
         vals: null,
       },
       {
         kind: "Field",
-        body: ["direction ="],
-        detail: "direction ",
+        body: ["direction="],
+        detail: "direction",
         documentation: "排列方向，可选值为 horizontal",
         vals: {
           kind: "Value",
@@ -58,10 +67,16 @@ exports.data = {
           documentation: "",
         },
       },
+
+      /**
+       * CheckboxGroup Event
+        事件名	说明	回调参数
+        bind:change	当绑定值变化时触发的事件	当前组件的值
+       */
       {
         kind: "Event",
-        body: ["bind:change="],
-        detail: "bind:change",
+        body: ["bind:change"],
+        detail: "onChange",
         documentation: "当绑定值变化时触发的事件",
         vals: null,
       },

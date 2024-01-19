@@ -11,6 +11,33 @@ exports.data = {
     detail: "Image 图片",
     documentation: `增强版的 img 标签，提供多种图片填充模式，支持图片懒加载、加载中提示、加载失败提示。`,
     attrs: [
+      /**
+       * Props
+        参数	说明	类型	默认值
+        src	图片链接	string	-
+        fit	图片填充模式	string	fill
+        alt	替代文本	string	-
+        width	宽度，默认单位为px	string | number	-
+        height	高度，默认单位为px	string | number	-
+        radius	圆角大小，默认单位为px	string | number	0
+        round	是否显示为圆形	boolean	false
+        lazy-load	是否懒加载	boolean	false
+        webp v1.10.11	是否解析 webp 格式	boolean	false
+        show-error	是否展示图片加载失败提示	boolean	true
+        show-loading	是否展示图片加载中提示	boolean	true
+        use-error-slot	是否使用 error 插槽	boolean	false
+        use-loading-slot	是否使用 loading 插槽	boolean	false
+        show-menu-by-longpress	是否开启长按图片显示识别小程序码菜单	boolean	false
+
+        图片填充模式 
+        名称	含义
+        contain	保持宽高缩放图片，使图片的长边能完全显示出来
+        cover	保持宽高缩放图片，使图片的短边能完全显示出来，裁剪长边
+        fill	拉伸图片，使图片填满元素
+        widthFix	缩放模式，宽度不变，高度自动变化，保持原图宽高比不变
+        heightFix	缩放模式，高度不变，宽度自动变化，保持原图宽高比不变
+        none	保持图片原有尺寸
+       */
       {
         kind: "Field",
         body: ["src="],
@@ -26,15 +53,8 @@ exports.data = {
         vals: {
           kind: "Value",
           body: ["contain", "cover", "fill", "widthFix", "heightFix", "none"],
-          detail: "fit 图片填充模式",
-          documentation: `
-            contain	保持宽高缩放图片，使图片的长边能完全显示出来
-            cover	保持宽高缩放图片，使图片的短边能完全显示出来，裁剪长边
-            fill	拉伸图片，使图片填满元素
-            widthFix	缩放模式，宽度不变，高度自动变化，保持原图宽高比不变
-            heightFix	缩放模式，高度不变，宽度自动变化，保持原图宽高比不变
-            none	保持图片原有尺寸
-            `,
+          detail: "",
+          documentation: "",
         },
       },
       {
@@ -161,27 +181,44 @@ exports.data = {
           documentation: "",
         },
       },
+
+      /**
+       * Events
+        事件名	说明	回调参数
+        bind:click	点击图片时触发	event: Event
+        bind:load	图片加载完毕时触发	event: Event
+        bind:error	图片加载失败时触发	event: Event
+       */
       {
         kind: "Event",
-        body: ["bind:click="],
+        body: ["bind:click"],
         detail: "bind:click",
         documentation: "点击图片时触发",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:load="],
+        body: ["bind:load"],
         detail: "bind:load",
         documentation: "图片加载完毕时触发",
         vals: null,
       },
       {
         kind: "Event",
-        body: ["bind:error="],
+        body: ["bind:error"],
         detail: "bind:error",
         documentation: "图片加载失败时触发",
         vals: null,
       },
+
+      /**
+       * 外部样式类
+        类名	说明
+        custom-class	根节点样式类
+        image-class	图片样式类
+        loading-class	loading 样式类
+        error-class	error 样式类
+       */
       {
         kind: "Field",
         body: ["custom-class="],
@@ -211,6 +248,12 @@ exports.data = {
         vals: null,
       },
     ],
+    /**
+     * Slots
+      名称	说明
+      loading	自定义加载中的提示内容
+      error	自定义加载失败时的提示内容
+     */
     slot: {
       kind: "Value",
       body: ["loading", "error"],

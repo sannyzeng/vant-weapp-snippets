@@ -11,6 +11,12 @@ exports.data = {
     detail: "IndexBar 索引栏 anchor",
     documentation: `用于列表的索引分类显示和快速定位。`,
     attrs: [
+      /**
+       * IndexAnchor Props
+        参数	说明	类型	默认值	版本
+        use-slot	是否使用自定义内容的插槽	boolean	false	-
+        index	索引字符	string | number	-	-
+       */
       {
         kind: "Field",
         body: ["use-slot="],
